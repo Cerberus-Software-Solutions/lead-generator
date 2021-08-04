@@ -8,12 +8,12 @@ class Header extends Component {
 
     const project = this.props.data.project;
     const github = this.props.data.github;
-    const name = this.props.data.name;
+    const name = this.props.data.brand_name;
     const description = this.props.data.description;
 
     return (
       <header id="home">
-        <ParticlesBg type="circle" bg={true} />
+        <ParticlesBg type="cobweb" bg={true} />
 
         <nav id="nav-wrap">
           <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
@@ -38,11 +38,11 @@ class Header extends Component {
 
             <li>
               <a className="smoothscroll" href="#resume">
-                Resume
+                Inquire
               </a>
             </li>
 
-            <li>
+            {/* <li>
               <a className="smoothscroll" href="#portfolio">
                 Works
               </a>
@@ -52,7 +52,7 @@ class Header extends Component {
               <a className="smoothscroll" href="#contact">
                 Contact
               </a>
-            </li>
+            </li> */}
           </ul>
         </nav>
 
