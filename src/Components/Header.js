@@ -37,7 +37,7 @@ class Header extends Component {
             </li>
 
             <li>
-              <a className="smoothscroll" href="#resume">
+              <a className="smoothscroll" href="#quiz">
                 Inquire
               </a>
             </li>
@@ -67,7 +67,7 @@ class Header extends Component {
             <hr />
             <Fade bottom duration={2000}>
               <ul className="social">
-                <a href="#resume" className="smoothscroll button btn project-btn">
+                <a href="#quiz" className="smoothscroll button btn project-btn">
                   <i className="fa fa-book"></i>Get Started
                 </a>
               </ul>

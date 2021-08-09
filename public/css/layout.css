@@ -230,48 +230,48 @@ ul#nav li.current a { color: #fe6928; }
 /* d. Resume Section
 /* ------------------------------------------------------------------ */
 
-#resume {
+#quiz {
    background: #fff;
    padding-top: 90px;
    padding-bottom: 72px;
    overflow: hidden;
 }
 
-#resume a, #resume a:visited  { color: #0762f9; }
-#resume a:hover, #resume a:focus { color: #313131; }
+#quiz a, #quiz a:visited  { color: #0762f9; }
+#quiz a:hover, #quiz a:focus { color: #313131; }
 
-#resume h1 {
+#quiz h1 {
    font: 18px/24px 'opensans-bold', sans-serif;
    text-transform: uppercase;
    letter-spacing: 1px;
 }
-#resume h1 span {
+#quiz h1 span {
    border-bottom: 3px solid #0762f9;
    padding-bottom: 6px;
 }
-#resume h3 {
+#quiz h3 {
    font: 25px/30px 'opensans-bold', sans-serif;
 }
 
-#resume .header-col { padding-top: 9px; }
-#resume .main-col { padding-right: 10%; }
+#quiz .header-col { padding-top: 9px; }
+#quiz .main-col { padding-right: 10%; }
 
 .education, .work {
    margin-bottom: 48px;
    padding-bottom: 24px;
    border-bottom: 1px solid #E8E8E8;
 }
-#resume .info {
+#quiz .info {
    font: 16px/24px 'librebaskerville-italic', serif;
    color: #6E7881;
    margin-bottom: 18px;
    margin-top: 9px;
 }
-#resume .info span {
+#quiz .info span {
    margin-right: 5px;
    margin-left: 5px;
 }
-#resume .date {
+#quiz .date {
    font: 15px/24px 'opensans-regular', sans-serif;
    margin-top: 6px;
 }
