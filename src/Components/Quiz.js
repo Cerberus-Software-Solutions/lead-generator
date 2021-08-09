@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TransitionGroup } from 'react-transition-group';
+import { CSSTransition } from 'react-transition-group';
 import Question from './Question';
 import QuestionCount from './QuestionCount';
 import AnswerOption from './AnswerOption';
@@ -20,7 +20,7 @@ function Quiz(props) {
   }
 
   return (
-    <TransitionGroup
+    <CSSTransition
       className="container"
       component="div"
       transitionName="fade"
@@ -36,7 +36,7 @@ function Quiz(props) {
           {props.answerOptions.map(renderAnswerOptions)}
         </ul>
       </div>
-    </TransitionGroup>
+    </CSSTransition>
   );
 }
 
