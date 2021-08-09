@@ -26,7 +26,7 @@ class Footer extends Component {
                 <a>&copy; Copyright 2021 DaveAutos</a>
                 <li>
                   <a title="Samson & Kashton Inc.">
-                  Design by Samson & Kashton Inc.
+                  Created by Samson & Kashton Inc.
                   </a>
                 </li>
               </ul>
