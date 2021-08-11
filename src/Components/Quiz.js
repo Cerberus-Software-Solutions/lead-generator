@@ -4,8 +4,33 @@ import { CSSTransition } from 'react-transition-group';
 import Question from './Question';
 import QuestionCount from './QuestionCount';
 import AnswerOption from './AnswerOption';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
+import { ButtonBase } from '@material-ui/core';
+import Button from '@material-ui/core/Button';
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  },
+  image: {
+    width: '100%',
+    height: '100%',
+    maxWidth: '100%',
+    maxHeight: '100%',
+    justifyContent: 'flex-start',
+    flexDirection: 'row',
+    display: 'inline-block',
+  },
+}));
 
 function Quiz(props) {
+  const classes = useStyles();
   function renderAnswerOptions(key) {
     return (
       <AnswerOption
@@ -16,6 +41,24 @@ function Quiz(props) {
         questionId={props.questionId}
         onAnswerSelected={props.onAnswerSelected}
       />
+    );
+  }
+
+   function createMCQuiz(){
+
+    
+    return (
+      <div className={classes.root}>
+        <Grid container spacing={3}>
+          {props.answerOptions.map((answerOptions)=>(
+            <Grid item xs={6}>
+              <Button className={classes.image} style={{textTransform: 'none'}} onClick={renderAnswerOptions}>
+                <Paper className={classes.paper} style={{fontSize: 18}} >{answerOptions["content"]}</Paper>
+              </Button>
+            </Grid>
+          ))}
+        </Grid>
+      </div>
     );
   }
 
@@ -32,8 +75,8 @@ function Quiz(props) {
       <div key={props.questionId}>
         <QuestionCount counter={props.questionId} total={props.questionTotal} />
         <Question content={props.question} />
-        <ul className="answerOptions">
-          {props.answerOptions.map(renderAnswerOptions)}
+        <ul className={classes.root}>
+          {createMCQuiz()}
         </ul>
       </div>
     </CSSTransition>
