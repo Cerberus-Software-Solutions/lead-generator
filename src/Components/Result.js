@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { CSSTransition } from 'react-transition-group';
+import { CSSTransitionGroup } from 'react-transition-group';
 
 function Result(props) {
   return (
-    <CSSTransition
+    <CSSTransitionGroup
       className="container result"
       component="div"
       transitionName="fade"
@@ -16,7 +16,7 @@ function Result(props) {
       <div>
         You prefer <strong>{props.quizResult}</strong>!
       </div>
-    </CSSTransition>
+    </CSSTransitionGroup>
   );
 }
 
