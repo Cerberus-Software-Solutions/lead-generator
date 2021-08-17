@@ -1,23 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
 
 function AnswerOption(props) {
   return (
-    <li className="answerOption">
-      <input
-        type="radio"
-        className="radioCustomButton"
-        name="radioGroup"
-        checked={props.answerType === props.answer}
-        id={props.answerType}
-        value={props.answerType}
-        disabled={props.answer}
-        onChange={props.onAnswerSelected}
-      />
-      <label className="radioCustomLabel" htmlFor={props.answerType}>
-        {props.answerContent}
-      </label>
-    </li>
+    <Grid item xs={6}>
+      <Button className={props.classes.image} style={{textTransform: 'none'}} onClick={props.onAnswerSelected}>
+        <Paper className={props.classes.paper} style={{fontSize: 18}}>{props.answerContent}</Paper>
+      </Button>
+    </Grid>
   );
 }
 

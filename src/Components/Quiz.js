@@ -4,11 +4,9 @@ import { CSSTransition } from 'react-transition-group';
 import Question from './Question';
 import QuestionCount from './QuestionCount';
 import AnswerOption from './AnswerOption';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-import { ButtonBase } from '@material-ui/core';
-import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -40,25 +38,18 @@ function Quiz(props) {
         answer={props.answer}
         questionId={props.questionId}
         onAnswerSelected={props.onAnswerSelected}
+        classes={classes}
       />
     );
   }
 
    function createMCQuiz(){
-
-    
     return (
       <div className={classes.root}>
-        <Grid container spacing={3}>
-          {props.answerOptions.map((answerOptions)=>(
-            <Grid item xs={6}>
-              <Button className={classes.image} style={{textTransform: 'none'}} onClick={renderAnswerOptions}>
-                <Paper className={classes.paper} style={{fontSize: 18}} >{answerOptions["content"]}</Paper>
-              </Button>
-            </Grid>
-          ))}
-        </Grid>
-      </div>
+          <Grid container spacing={3}>
+            {props.answerOptions.map(renderAnswerOptions)}
+          </Grid>
+        </div>
     );
   }
 
@@ -75,9 +66,7 @@ function Quiz(props) {
       <div key={props.questionId}>
         <QuestionCount counter={props.questionId} total={props.questionTotal} />
         <Question content={props.question} />
-        <ul className={classes.root}>
-          {createMCQuiz()}
-        </ul>
+        {createMCQuiz()}
       </div>
     </CSSTransition>
   );
