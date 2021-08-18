@@ -7,7 +7,7 @@ import Button from '@material-ui/core/Button';
 function AnswerOption(props) {
   return (
     <Grid item xs={6}>
-      <Button className={props.classes.image} style={{textTransform: 'none'}} onClick={props.onAnswerSelected}>
+      <Button className={props.classes.image} style={{textTransform: 'none'}} value={props.answerType} onClick={props.onAnswerSelected}>
         <Paper className={props.classes.paper} style={{fontSize: 18}}>{props.answerContent}</Paper>
       </Button>
     </Grid>

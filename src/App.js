@@ -8,9 +8,8 @@ import About from "./Components/About";
 import quizQuestions from './Questions/quizQuestions.js';
 import Quiz from './Components/Quiz';
 import Result from './Components/Result';
-import Resume from "./Components/Resume";
-import Contact from "./Components/Contact";
-import Portfolio from "./Components/Portfolio";
+
+var currentPath = "";
 
 class App extends Component {
   constructor(props) {
@@ -19,6 +18,7 @@ class App extends Component {
       foo: "bar",
       resumeData: {},
       counter: 0,
+      currentQuestion: 1,
       questionId: 1,
       question: '',
       answerOptions: [],
@@ -51,18 +51,21 @@ class App extends Component {
   componentDidMount() {
     this.getResumeData();
 
+    console.log(quizQuestions[0]["firstQuestion"].answers)
+
     this.setState({
-      question: quizQuestions[0].question,
-      answerOptions: quizQuestions[0].answers
+      question: quizQuestions[0]["firstQuestion"][0].question,
+      answerOptions: quizQuestions[0]["firstQuestion"][0].answers
     });
   }
 
 
   handleAnswerSelected(event) {
-    this.setUserAnswer(event.currentTarget.value);
+    const value = event.currentTarget.value;
+    this.setUserAnswer(value);
 
-    if (this.state.questionId < quizQuestions.length) {
-      setTimeout(() => this.setNextQuestion(), 300);
+    if (this.state.questionId < quizQuestions[0][value].length) {
+      setTimeout(() => this.setNextQuestion(value), 300);
     } else {
       setTimeout(() => this.setResults(this.getResults()), 300);
     }
@@ -78,16 +81,24 @@ class App extends Component {
     }));
   }
 
-  setNextQuestion() {
-    const counter = this.state.counter + 1;
-    const questionId = this.state.questionId + 1;
-    //TODO get paths working here (change logic)
+  setNextQuestion(nextPath) {
+    var counter = this.state.counter;
+    var questionId = this.state.questionId;
+    var currentQuestion = this.state.currentQuestion;
+
+    if(currentPath !== nextPath) {
+      counter = 0;
+      questionId = 0;
+      currentPath = nextPath;
+    }
+    
     this.setState({
-      counter: counter,
-      questionId: questionId,
-      question: quizQuestions[counter].question,
-      answerOptions: quizQuestions[counter].answers,
-      answer: ''
+      questionId: questionId + 1,
+      question: quizQuestions[0][nextPath][counter].question,
+      answerOptions: quizQuestions[0][nextPath][counter].answers,
+      answer: '',
+      counter: counter + 1,
+      currentQuestion: currentQuestion + 1,
     });
   }
 
@@ -102,7 +113,7 @@ class App extends Component {
 
   setResults(result) {
     if (result.length === 1) {
-      this.setState({ result: "done" });
+      this.setState({ result: result[0] });
     }
   }
 
@@ -111,9 +122,8 @@ class App extends Component {
       <Quiz
         answer={this.state.answer}
         answerOptions={this.state.answerOptions}
-        questionId={this.state.questionId}
+        questionId={this.state.currentQuestion}
         question={this.state.question}
-        questionTotal={quizQuestions.length}
         onAnswerSelected={this.handleAnswerSelected}
       />
     );

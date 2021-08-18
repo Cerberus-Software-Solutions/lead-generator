@@ -1,327 +1,326 @@
 var quizQuestions = [
     //first question
     {
-        question: "What type of car are you looking for?",
-        answers: [
+        firstQuestion: [
             {
-                type: "Car",
-                content: "Car"
-            },
+                question: "What type of car are you looking for?",
+                answers: [
+                    {
+                        type: "pathOne",
+                        content: "Car"
+                    },
 
-            {
-                type: "Truck",
-                content: "Truck"
-            },
+                    {
+                        type: "pathTwo",
+                        content: "Truck"
+                    },
 
-            {
-                type: "SUV",
-                content: "SUV"
-            },
+                    {
+                        type: "pathOne",
+                        content: "SUV"
+                    },
 
-            {
-                type: "New Hyundai",
-                content: "New Hyundai"
+                    {
+                        type: "pathThree",
+                        content: "New Hyundai"
+                    }
+                ],
             }
-        ]
-    },
-    {
-    //PATH IF CAR OR SUV PICKED
-    pathOne: [
-        {
-            question: "New or Used?",
-            answers: [
-                {
-                    type: "Car",
-                    content: "New"
-                },
-    
-                {
-                    type: "Truck",
-                    content: "Used"
-                }
-            ]
-        },
-        {
-            question: "Gas or Hybrid/Electric?",
-            answers: [
-                {
-                    type: "Car",
-                    content: "Gas"
-                },
-    
-                {
-                    type: "Truck",
-                    content: "Hybrid/Electric"
-                }
-            ]
-        },
-        {
-            //PATH FOR IF THEY PICK HYBRID/ELECTRIC
-            pathOneHybrid: [
-                {
-                    question: "Which type are you looking for?",
-                    answers: [
-                        {
-                            type: "Car",
-                            content: "Hybrid"
-                        },
-            
-                        {
-                            type: "Truck",
-                            content: "Plug in Hybrid"
-                        },
-                        {
-                            type: "Car",
-                            content: "Electric"
-                        }
-                    ]
-                },
-                {
-                    question: "Choose one of the following:",
-                    answers: [
-                        {
-                            type: "Car",
-                            content: "Import"
-                        },
-            
-                        {
-                            type: "Truck",
-                            content: "Domestic (North America)"
-                        },
-                        {
-                            type: "Car",
-                            content: "European"
-                        }
-                    ]
-                },
-                {
-                    question: "Monthly Budget?",
-                    answers: [
-                        {
-                            type: "Car",
-                            content: "Less than 200"
-                        },
-            
-                        {
-                            type: "Truck",
-                            content: "200-300"
-                        },
-                        {
-                            type: "Car",
-                            content: "300-400"
-                        },
-            
-                        {
-                            type: "Truck",
-                            content: "400-500"
-                        },
-                        {
-                            type: "Car",
-                            content: "500-600"
-                        },
-            
-                        {
-                            type: "Truck",
-                            content: "More than 600"
-                        },
-                    ]
-                },
-                {
-                    question: "Are you trading in a vehicle?",
-                    answers: [
-                        {
-                            type: "Car",
-                            content: "Yes"
-                        },
-            
-                        {
-                            type: "Truck",
-                            content: "No"
-                        }
-                    ]
-                },
-                {
-                    question: "Year and Mileage",
-                    answers: [
-                        {
-                            type: "Car",
-                            content: "Yes"
-                        }
-                    ]
-                },
-                {
-                    question: "What features/packages are you looking for?",
-                    answers: [
-                        {
-                            type: "Car",
-                            content: "Basic"
-                        },
-            
-                        {
-                            type: "Truck",
-                            content: "Middle"
-                        },
-                        {
-                            type: "Car",
-                            content: "Loaded"
-                        }
-                    ]
-                },
-                {
-                    question: "When were you looking to purchase?",
-                    answers: [
-                        {
-                            type: "Car",
-                            content: "Less than a week"
-                        },
-            
-                        {
-                            type: "Truck",
-                            content: "2 weeks"
-                        },
-            
-                        {
-                            type: "SUV",
-                            content: "1 month"
-                        },
-            
-                        {
-                            type: "New Hyundai",
-                            content: "More than a month"
-                        }
-                    ]
-                },
-            ]
-        },
-        {
-            question: "Monthly Budget?",
-            answers: [
-                {
-                    type: "Car",
-                    content: "Less than 200"
-                },
-    
-                {
-                    type: "Truck",
-                    content: "200-300"
-                },
-                {
-                    type: "Car",
-                    content: "300-400"
-                },
-    
-                {
-                    type: "Truck",
-                    content: "400-500"
-                },
-                {
-                    type: "Car",
-                    content: "500-600"
-                },
-    
-                {
-                    type: "Truck",
-                    content: "More than 600"
-                },
-            ]
-        },
-        {
-            question: "Are you trading in a vehicle?",
-            answers: [
-                {
-                    type: "Car",
-                    content: "Yes"
-                },
-                {
-                    type: "Truck",
-                    content: "No"
-                }
-            ]
-        },
-        {
-            question: "Choose one of the following:",
-            answers: [
-                {
-                    type: "Car",
-                    content: "Import"
-                },
-    
-                {
-                    type: "Truck",
-                    content: "Domestic (North America)"
-                },
-                {
-                    type: "Car",
-                    content: "European"
-                }
-            ]
-        },
-        {
-            question: "Year and Mileage",
-            answers: [
-                {
-                    type: "Car",
-                    content: "Yes"
-                }
-            ]
-        },
-        {
-            question: "What features/packages are you looking for?",
-            answers: [
-                {
-                    type: "Car",
-                    content: "Basic"
-                },
-    
-                {
-                    type: "Truck",
-                    content: "Middle"
-                },
-                {
-                    type: "Car",
-                    content: "Loaded"
-                }
-            ]
-        },
-        {
-            question: "When were you looking to purchase?",
-            answers: [
-                {
-                    type: "Car",
-                    content: "Less than a week"
-                },
-    
-                {
-                    type: "Truck",
-                    content: "2 weeks"
-                },
-    
-                {
-                    type: "SUV",
-                    content: "1 month"
-                },
-    
-                {
-                    type: "New Hyundai",
-                    content: "More than a month"
-                }
-            ]
-        },
-        ]
-    },
-    //TRUCK PATH
-    {
+        ],
+        //PATH IF CAR OR SUV PICKED
+        pathOne: [
+            {
+                question: "New or Used?",
+                answers: [
+                    {
+                        type: "pathOne",
+                        content: "New"
+                    },
+        
+                    {
+                        type: "pathOne",
+                        content: "Used"
+                    }
+                ]
+            },
+            {
+                question: "Gas or Hybrid/Electric?",
+                answers: [
+                    {
+                        type: "pathOneGasPath",
+                        content: "Gas"
+                    },
+        
+                    {
+                        type: "pathOneHybrid",
+                        content: "Hybrid/Electric"
+                    }
+                ]
+            },
+        ],
+        pathOneGasPath: [
+            {
+                question: "Monthly Budget?",
+                answers: [
+                    {
+                        type: "pathOneGasPath",
+                        content: "Less than 200"
+                    },
+        
+                    {
+                        type: "pathOneGasPath",
+                        content: "200-300"
+                    },
+                    {
+                        type: "pathOneGasPath",
+                        content: "300-400"
+                    },
+        
+                    {
+                        type: "pathOneGasPath",
+                        content: "400-500"
+                    },
+                    {
+                        type: "pathOneGasPath",
+                        content: "500-600"
+                    },
+        
+                    {
+                        type: "pathOneGasPath",
+                        content: "More than 600"
+                    },
+                ]
+            },
+            {
+                question: "Are you trading in a vehicle?",
+                answers: [
+                    {
+                        type: "pathOneGasPath",
+                        content: "Yes"
+                    },
+                    {
+                        type: "pathOneGasPath",
+                        content: "No"
+                    }
+                ]
+            },
+            {
+                question: "Choose one of the following:",
+                answers: [
+                    {
+                        type: "pathOneGasPath",
+                        content: "Import"
+                    },
+        
+                    {
+                        type: "pathOneGasPath",
+                        content: "Domestic (North America)"
+                    },
+                    {
+                        type: "pathOneGasPath",
+                        content: "European"
+                    }
+                ]
+            },
+            {
+                question: "Year and Mileage",
+                answers: [
+                    {
+                        type: "pathOneGasPath",
+                        content: "Yes"
+                    }
+                ]
+            },
+            {
+                question: "What features/packages are you looking for?",
+                answers: [
+                    {
+                        type: "pathOneGasPath",
+                        content: "Basic"
+                    },
+        
+                    {
+                        type: "pathOneGasPath",
+                        content: "Middle"
+                    },
+                    {
+                        type: "pathOneGasPath",
+                        content: "Loaded"
+                    }
+                ]
+            },
+            {
+                question: "When were you looking to purchase?",
+                answers: [
+                    {
+                        type: "pathOneGasPath",
+                        content: "Less than a week"
+                    },
+        
+                    {
+                        type: "pathOneGasPath",
+                        content: "2 weeks"
+                    },
+        
+                    {
+                        type: "pathOneGasPath",
+                        content: "1 month"
+                    },
+        
+                    {
+                        type: "pathOneGasPath",
+                        content: "More than a month"
+                    }
+                ]
+            },
+        ],
+        //PATH FOR IF THEY PICK HYBRID/ELECTRIC
+        pathOneHybrid: [
+            {
+                question: "Which type are you looking for?",
+                answers: [
+                    {
+                        type: "pathOneHybrid",
+                        content: "Hybrid"
+                    },
+        
+                    {
+                        type: "pathOneHybrid",
+                        content: "Plug in Hybrid"
+                    },
+                    {
+                        type: "pathOneHybrid",
+                        content: "Electric"
+                    }
+                ]
+            },
+            {
+                question: "Choose one of the following:",
+                answers: [
+                    {
+                        type: "pathOneHybrid",
+                        content: "Import"
+                    },
+        
+                    {
+                        type: "pathOneHybrid",
+                        content: "Domestic (North America)"
+                    },
+                    {
+                        type: "pathOneHybrid",
+                        content: "European"
+                    }
+                ]
+            },
+            {
+                question: "Monthly Budget?",
+                answers: [
+                    {
+                        type: "pathOneHybrid",
+                        content: "Less than 200"
+                    },
+        
+                    {
+                        type: "pathOneHybrid",
+                        content: "200-300"
+                    },
+                    {
+                        type: "pathOneHybrid",
+                        content: "300-400"
+                    },
+        
+                    {
+                        type: "pathOneHybrid",
+                        content: "400-500"
+                    },
+                    {
+                        type: "pathOneHybrid",
+                        content: "500-600"
+                    },
+        
+                    {
+                        type: "pathOneHybrid",
+                        content: "More than 600"
+                    },
+                ]
+            },
+            {
+                question: "Are you trading in a vehicle?",
+                answers: [
+                    {
+                        type: "pathOneHybrid",
+                        content: "Yes"
+                    },
+        
+                    {
+                        type: "pathOneHybrid",
+                        content: "No"
+                    }
+                ]
+            },
+            {
+                question: "Year and Mileage",
+                answers: [
+                    {
+                        type: "pathOneHybrid",
+                        content: "Yes"
+                    }
+                ]
+            },
+            {
+                question: "What features/packages are you looking for?",
+                answers: [
+                    {
+                        type: "pathOneHybrid",
+                        content: "Basic"
+                    },
+        
+                    {
+                        type: "pathOneHybrid",
+                        content: "Middle"
+                    },
+                    {
+                        type: "pathOneHybrid",
+                        content: "Loaded"
+                    }
+                ]
+            },
+            {
+                question: "When were you looking to purchase?",
+                answers: [
+                    {
+                        type: "pathOneHybrid",
+                        content: "Less than a week"
+                    },
+        
+                    {
+                        type: "pathOneHybrid",
+                        content: "2 weeks"
+                    },
+        
+                    {
+                        type: "pathOneHybrid",
+                        content: "1 month"
+                    },
+        
+                    {
+                        type: "pathOneHybrid",
+                        content: "More than a month"
+                    }
+                ]
+            },
+        ],
         pathTwo: [
             {
                 question: "New or Used?",
                 answers: [
                     {
-                        type: "Car",
+                        type: "pathTwo",
                         content: "New"
                     },
         
                     {
-                        type: "Truck",
+                        type: "pathTwo",
                         content: "Used"
                     }
                 ]
@@ -330,21 +329,21 @@ var quizQuestions = [
                 question: "Monthly Budget?",
                 answers: [
                     {
-                        type: "Car",
+                        type: "pathTwo",
                         content: "350-450"
                     },
         
                     {
-                        type: "Truck",
+                        type: "pathTwo",
                         content: "500-550"
                     },
                     {
-                        type: "Car",
+                        type: "pathTwo",
                         content: "600-700"
                     },
         
                     {
-                        type: "Truck",
+                        type: "pathTwo",
                         content: "800-1000+"
                     },
                 ]
@@ -353,12 +352,12 @@ var quizQuestions = [
                 question: "Are you trading in a vehicle?",
                 answers: [
                     {
-                        type: "Car",
+                        type: "pathTwo",
                         content: "Yes"
                     },
         
                     {
-                        type: "Truck",
+                        type: "pathTwo",
                         content: "No"
                     }
                 ]
@@ -367,12 +366,12 @@ var quizQuestions = [
                 question: "What size of Truck are you looking for?",
                 answers: [
                     {
-                        type: "Car",
+                        type: "pathTwo",
                         content: "Mid size"
                     },
         
                     {
-                        type: "Truck",
+                        type: "pathTwo",
                         content: "Full size"
                     }
                 ]
@@ -381,7 +380,7 @@ var quizQuestions = [
                 question: "Year and Mileage",
                 answers: [
                     {
-                        type: "Car",
+                        type: "pathTwo",
                         content: "Yes"
                     }
                 ]
@@ -390,7 +389,7 @@ var quizQuestions = [
                 question: "What features and packages are you looking for? (select all that applies)",
                 answers: [
                     {
-                        type: "Car",
+                        type: "pathTwo",
                         content: "Yes"
                     }
                 ]
@@ -399,270 +398,264 @@ var quizQuestions = [
                 question: "When were you looking to purchase?",
                 answers: [
                     {
-                        type: "Car",
+                        type: "pathTwo",
                         content: "Less than a week"
                     },
         
                     {
-                        type: "Truck",
+                        type: "pathTwo",
                         content: "2 weeks"
                     },
         
                     {
-                        type: "SUV",
+                        type: "pathTwo",
                         content: "1 month"
                     },
         
                     {
-                        type: "New Hyundai",
+                        type: "pathTwo",
                         content: "More than a month"
                     }
                 ]
             },
-        ]
-    },
-    {
+        ],
         pathThree:[
             {
                 question: "Which type were you looking for?",
                 answers: [
                     {
-                        type: "Car",
+                        type: "pathThreeCar",
                         content: "Car"
                     },
         
                     {
-                        type: "Truck",
+                        type: "pathThreeSUV",
                         content: "SUV"
                     }
                 ]
             },
+        ],
+        pathThreeCar: [
             {
-                pathThreeCar: [
+                question: "Which model are you interted in?",
+                answers: [
                     {
-                        question: "Which model are you interted in?",
-                        answers: [
-                            {
-                                type: "Car",
-                                content: "Elantra"
-                            },
+                        type: "pathThreeCar",
+                        content: "Elantra"
+                    },
 
-                            {
-                                type: "Car",
-                                content: "Veloster"
-                            },
-                        ]
-                    },
                     {
-                        question: "Monthly Budget?",
-                        answers: [
-                            {
-                                type: "Car",
-                                content: "Less than 200"
-                            },
-                
-                            {
-                                type: "Truck",
-                                content: "200-300"
-                            },
-                            {
-                                type: "Car",
-                                content: "300-400"
-                            },
-                
-                            {
-                                type: "Truck",
-                                content: "400-500"
-                            },
-                            {
-                                type: "Car",
-                                content: "500-600"
-                            },
-                
-                            {
-                                type: "Truck",
-                                content: "More than 600"
-                            },
-                        ]
-                    },
-                    {
-                        question: "Are you trading in a vehicle?",
-                        answers: [
-                            {
-                                type: "Car",
-                                content: "Yes"
-                            },
-                
-                            {
-                                type: "Truck",
-                                content: "No"
-                            }
-                        ]
-                    },
-                    {
-                        question: "What features/packages are you looking for?",
-                        answers: [
-                            {
-                                type: "Car",
-                                content: "Basic"
-                            },
-                
-                            {
-                                type: "Truck",
-                                content: "Middle"
-                            },
-                            {
-                                type: "Car",
-                                content: "Loaded"
-                            }
-                        ]
-                    },
-                    {
-                        question: "When were you looking to purchase?",
-                        answers: [
-                            {
-                                type: "Car",
-                                content: "Less than a week"
-                            },
-                
-                            {
-                                type: "Truck",
-                                content: "2 weeks"
-                            },
-                
-                            {
-                                type: "SUV",
-                                content: "1 month"
-                            },
-                
-                            {
-                                type: "New Hyundai",
-                                content: "More than a month"
-                            }
-                        ]
+                        type: "pathThreeCar",
+                        content: "Veloster"
                     },
                 ]
             },
             {
-                pathThreeSUV: [
+                question: "Monthly Budget?",
+                answers: [
                     {
-                        question: "Which model are you interted in?",
-                        answers: [
-                            {
-                                type: "Car",
-                                content: "Venue"
-                            },
+                        type: "pathThreeCar",
+                        content: "Less than 200"
+                    },
+        
+                    {
+                        type: "pathThreeCar",
+                        content: "200-300"
+                    },
+                    {
+                        type: "pathThreeCar",
+                        content: "300-400"
+                    },
+        
+                    {
+                        type: "pathThreeCar",
+                        content: "400-500"
+                    },
+                    {
+                        type: "pathThreeCar",
+                        content: "500-600"
+                    },
+        
+                    {
+                        type: "pathThreeCar",
+                        content: "More than 600"
+                    },
+                ]
+            },
+            {
+                question: "Are you trading in a vehicle?",
+                answers: [
+                    {
+                        type: "pathThreeCar",
+                        content: "Yes"
+                    },
+        
+                    {
+                        type: "pathThreeCar",
+                        content: "No"
+                    }
+                ]
+            },
+            {
+                question: "What features/packages are you looking for?",
+                answers: [
+                    {
+                        type: "pathThreeCar",
+                        content: "Basic"
+                    },
+        
+                    {
+                        type: "pathThreeCar",
+                        content: "Middle"
+                    },
+                    {
+                        type: "pathThreeCar",
+                        content: "Loaded"
+                    }
+                ]
+            },
+            {
+                question: "When were you looking to purchase?",
+                answers: [
+                    {
+                        type: "pathThreeCar",
+                        content: "Less than a week"
+                    },
+        
+                    {
+                        type: "pathThreeCar",
+                        content: "2 weeks"
+                    },
+        
+                    {
+                        type: "pathThreeCar",
+                        content: "1 month"
+                    },
+        
+                    {
+                        type: "pathThreeCar",
+                        content: "More than a month"
+                    }
+                ]
+            },
+        ],
+        pathThreeSUV: [
+            {
+                question: "Which model are you interested in?",
+                answers: [
+                    {
+                        type: "pathThreeSUV",
+                        content: "Venue"
+                    },
 
-                            {
-                                type: "Car",
-                                content: "Kona"
-                            },
-                            {
-                                type: "Car",
-                                content: "Tucson"
-                            },
-                            {
-                                type: "Car",
-                                content: "Santa Fe"
-                            },
-                            {
-                                type: "Car",
-                                content: "Palisade"
-                            },
-                        ]
+                    {
+                        type: "pathThreeSUV",
+                        content: "Kona"
                     },
                     {
-                        question: "Monthly Budget?",
-                        answers: [
-                            {
-                                type: "Car",
-                                content: "Less than 200"
-                            },
-                
-                            {
-                                type: "Truck",
-                                content: "200-300"
-                            },
-                            {
-                                type: "Car",
-                                content: "300-400"
-                            },
-                
-                            {
-                                type: "Truck",
-                                content: "400-500"
-                            },
-                            {
-                                type: "Car",
-                                content: "500-600"
-                            },
-                
-                            {
-                                type: "Truck",
-                                content: "More than 600"
-                            },
-                        ]
+                        type: "pathThreeSUV",
+                        content: "Tucson"
                     },
                     {
-                        question: "Are you trading in a vehicle?",
-                        answers: [
-                            {
-                                type: "Car",
-                                content: "Yes"
-                            },
-                
-                            {
-                                type: "Truck",
-                                content: "No"
-                            }
-                        ]
+                        type: "pathThreeSUV",
+                        content: "Santa Fe"
                     },
                     {
-                        question: "What features/packages are you looking for?",
-                        answers: [
-                            {
-                                type: "Car",
-                                content: "Basic"
-                            },
-                
-                            {
-                                type: "Truck",
-                                content: "Middle"
-                            },
-                            {
-                                type: "Car",
-                                content: "Loaded"
-                            }
-                        ]
+                        type: "pathThreeSUV",
+                        content: "Palisade"
+                    },
+                ]
+            },
+            {
+                question: "Monthly Budget?",
+                answers: [
+                    {
+                        type: "pathThreeSUV",
+                        content: "Less than 200"
+                    },
+        
+                    {
+                        type: "pathThreeSUV",
+                        content: "200-300"
                     },
                     {
-                        question: "When were you looking to purchase?",
-                        answers: [
-                            {
-                                type: "Car",
-                                content: "Less than a week"
-                            },
-                
-                            {
-                                type: "Truck",
-                                content: "2 weeks"
-                            },
-                
-                            {
-                                type: "SUV",
-                                content: "1 month"
-                            },
-                
-                            {
-                                type: "New Hyundai",
-                                content: "More than a month"
-                            }
-                        ]
+                        type: "pathThreeSUV",
+                        content: "300-400"
                     },
+        
+                    {
+                        type: "pathThreeSUV",
+                        content: "400-500"
+                    },
+                    {
+                        type: "pathThreeSUV",
+                        content: "500-600"
+                    },
+        
+                    {
+                        type: "pathThreeSUV",
+                        content: "More than 600"
+                    },
+                ]
+            },
+            {
+                question: "Are you trading in a vehicle?",
+                answers: [
+                    {
+                        type: "pathThreeSUV",
+                        content: "Yes"
+                    },
+        
+                    {
+                        type: "pathThreeSUV",
+                        content: "No"
+                    }
+                ]
+            },
+            {
+                question: "What features/packages are you looking for?",
+                answers: [
+                    {
+                        type: "pathThreeSUV",
+                        content: "Basic"
+                    },
+        
+                    {
+                        type: "pathThreeSUV",
+                        content: "Middle"
+                    },
+                    {
+                        type: "pathThreeSUV",
+                        content: "Loaded"
+                    }
+                ]
+            },
+            {
+                question: "When were you looking to purchase?",
+                answers: [
+                    {
+                        type: "pathThreeSUV",
+                        content: "Less than a week"
+                    },
+        
+                    {
+                        type: "pathThreeSUV",
+                        content: "2 weeks"
+                    },
+        
+                    {
+                        type: "pathThreeSUV",
+                        content: "1 month"
+                    },
+        
+                    {
+                        type: "pathThreeSUV",
+                        content: "More than a month"
+                    }
                 ]
             },
         ]
-    },
-  ];
+    }
+];
   
   export default quizQuestions;

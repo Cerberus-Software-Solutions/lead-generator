@@ -65,7 +65,7 @@ function Quiz(props) {
         transitionAppearTimeout={500}
       >
         <div key={props.questionId}>
-          <QuestionCount counter={props.questionId} total={props.questionTotal} />
+          <QuestionCount counter={props.questionId} />
           <Question content={props.question} />
           {createMCQuiz()}
         </div>
@@ -79,7 +79,6 @@ Quiz.propTypes = {
   answerOptions: PropTypes.array.isRequired,
   question: PropTypes.string.isRequired,
   questionId: PropTypes.number.isRequired,
-  questionTotal: PropTypes.number.isRequired,
   onAnswerSelected: PropTypes.func.isRequired
 };
 
