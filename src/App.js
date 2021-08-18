@@ -81,7 +81,7 @@ class App extends Component {
   setNextQuestion() {
     const counter = this.state.counter + 1;
     const questionId = this.state.questionId + 1;
-
+    //TODO get paths working here (change logic)
     this.setState({
       counter: counter,
       questionId: questionId,
@@ -96,15 +96,13 @@ class App extends Component {
     const answersCountKeys = Object.keys(answersCount);
     const answersCountValues = answersCountKeys.map(key => answersCount[key]);
     const maxAnswerCount = Math.max.apply(null, answersCountValues);
-
+    
     return answersCountKeys.filter(key => answersCount[key] === maxAnswerCount);
   }
 
   setResults(result) {
     if (result.length === 1) {
-      this.setState({ result: result[0] });
-    } else {
-      this.setState({ result: 'Undetermined' });
+      this.setState({ result: "done" });
     }
   }
 

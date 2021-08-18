@@ -4,19 +4,21 @@ import { CSSTransitionGroup } from 'react-transition-group';
 
 function Result(props) {
   return (
-    <CSSTransitionGroup
-      className="container result"
-      component="div"
-      transitionName="fade"
-      transitionEnterTimeout={800}
-      transitionLeaveTimeout={500}
-      transitionAppear
-      transitionAppearTimeout={500}
-    >
-      <div>
-        You prefer <strong>{props.quizResult}</strong>!
-      </div>
-    </CSSTransitionGroup>
+    <section id="quiz">
+      <CSSTransitionGroup
+        className="container result"
+        component="div"
+        transitionName="fade"
+        transitionEnterTimeout={800}
+        transitionLeaveTimeout={500}
+        transitionAppear
+        transitionAppearTimeout={500}
+      >
+        <div>
+          Thank you for inquiring. Your answers have been sent to my email and I will be contacting you as soon as I can.
+        </div>
+      </CSSTransitionGroup>
+    </section>
   );
 }
 

@@ -54,21 +54,23 @@ function Quiz(props) {
   }
 
   return (
-    <CSSTransitionGroup 
-      className="container"
-      component="div"
-      transitionName="fade"
-      transitionEnterTimeout={800}
-      transitionLeaveTimeout={500}
-      transitionAppear
-      transitionAppearTimeout={500}
-    >
-      <div key={props.questionId}>
-        <QuestionCount counter={props.questionId} total={props.questionTotal} />
-        <Question content={props.question} />
-        {createMCQuiz()}
-      </div>
-    </CSSTransitionGroup>
+    <section id="quiz">
+      <CSSTransitionGroup 
+        className="container"
+        component="div"
+        transitionName="fade"
+        transitionEnterTimeout={800}
+        transitionLeaveTimeout={500}
+        transitionAppear
+        transitionAppearTimeout={500}
+      >
+        <div key={props.questionId}>
+          <QuestionCount counter={props.questionId} total={props.questionTotal} />
+          <Question content={props.question} />
+          {createMCQuiz()}
+        </div>
+      </CSSTransitionGroup>
+    </section>
   );
 }
 
