@@ -10,7 +10,6 @@ class About extends Component {
     const bio = this.props.data.bio;
     const phone = this.props.data.phone;
     const email = this.props.data.email;
-    const resumeDownload = this.props.data.resumedownload;
 
     return (
       <section id="about">

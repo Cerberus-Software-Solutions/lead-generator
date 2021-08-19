@@ -9,7 +9,7 @@ import quizQuestions from './Questions/quizQuestions.js';
 import Quiz from './Components/Quiz';
 import Result from './Components/Result';
 
-var currentPath = "";
+const DONE_QUIZ = "Done";
 
 class App extends Component {
   constructor(props) {
@@ -17,9 +17,9 @@ class App extends Component {
     this.state = {
       foo: "bar",
       resumeData: {},
-      counter: 0,
+      counter: 0, //counter for the current question in the current path we're in
       currentQuestion: 1,
-      questionId: 1,
+      currentPath: "",
       question: '',
       answerOptions: [],
       answer: '',
@@ -51,8 +51,6 @@ class App extends Component {
   componentDidMount() {
     this.getResumeData();
 
-    console.log(quizQuestions[0]["firstQuestion"].answers)
-
     this.setState({
       question: quizQuestions[0]["firstQuestion"][0].question,
       answerOptions: quizQuestions[0]["firstQuestion"][0].answers
@@ -64,7 +62,7 @@ class App extends Component {
     const value = event.currentTarget.value;
     this.setUserAnswer(value);
 
-    if (this.state.questionId < quizQuestions[0][value].length) {
+    if (value !== DONE_QUIZ) {
       setTimeout(() => this.setNextQuestion(value), 300);
     } else {
       setTimeout(() => this.setResults(this.getResults()), 300);
@@ -83,22 +81,21 @@ class App extends Component {
 
   setNextQuestion(nextPath) {
     var counter = this.state.counter;
-    var questionId = this.state.questionId;
     var currentQuestion = this.state.currentQuestion;
+    var currentPath = this.state.currentPath;
 
     if(currentPath !== nextPath) {
       counter = 0;
-      questionId = 0;
       currentPath = nextPath;
     }
     
     this.setState({
-      questionId: questionId + 1,
       question: quizQuestions[0][nextPath][counter].question,
       answerOptions: quizQuestions[0][nextPath][counter].answers,
       answer: '',
       counter: counter + 1,
       currentQuestion: currentQuestion + 1,
+      currentPath: currentPath
     });
   }
 

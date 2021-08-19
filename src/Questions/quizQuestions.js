@@ -153,22 +153,22 @@ var quizQuestions = [
                 question: "When were you looking to purchase?",
                 answers: [
                     {
-                        type: "pathOneGasPath",
+                        type: "lastQuestion",
                         content: "Less than a week"
                     },
         
                     {
-                        type: "pathOneGasPath",
+                        type: "lastQuestion",
                         content: "2 weeks"
                     },
         
                     {
-                        type: "pathOneGasPath",
+                        type: "lastQuestion",
                         content: "1 month"
                     },
         
                     {
-                        type: "pathOneGasPath",
+                        type: "lastQuestion",
                         content: "More than a month"
                     }
                 ]
@@ -289,22 +289,22 @@ var quizQuestions = [
                 question: "When were you looking to purchase?",
                 answers: [
                     {
-                        type: "pathOneHybrid",
+                        type: "lastQuestion",
                         content: "Less than a week"
                     },
         
                     {
-                        type: "pathOneHybrid",
+                        type: "lastQuestion",
                         content: "2 weeks"
                     },
         
                     {
-                        type: "pathOneHybrid",
+                        type: "lastQuestion",
                         content: "1 month"
                     },
         
                     {
-                        type: "pathOneHybrid",
+                        type: "lastQuestion",
                         content: "More than a month"
                     }
                 ]
@@ -398,22 +398,22 @@ var quizQuestions = [
                 question: "When were you looking to purchase?",
                 answers: [
                     {
-                        type: "pathTwo",
+                        type: "lastQuestion",
                         content: "Less than a week"
                     },
         
                     {
-                        type: "pathTwo",
+                        type: "lastQuestion",
                         content: "2 weeks"
                     },
         
                     {
-                        type: "pathTwo",
+                        type: "lastQuestion",
                         content: "1 month"
                     },
         
                     {
-                        type: "pathTwo",
+                        type: "lastQuestion",
                         content: "More than a month"
                     }
                 ]
@@ -518,22 +518,22 @@ var quizQuestions = [
                 question: "When were you looking to purchase?",
                 answers: [
                     {
-                        type: "pathThreeCar",
+                        type: "lastQuestion",
                         content: "Less than a week"
                     },
         
                     {
-                        type: "pathThreeCar",
+                        type: "lastQuestion",
                         content: "2 weeks"
                     },
         
                     {
-                        type: "pathThreeCar",
+                        type: "lastQuestion",
                         content: "1 month"
                     },
         
                     {
-                        type: "pathThreeCar",
+                        type: "lastQuestion",
                         content: "More than a month"
                     }
                 ]
@@ -634,26 +634,46 @@ var quizQuestions = [
                 question: "When were you looking to purchase?",
                 answers: [
                     {
-                        type: "pathThreeSUV",
+                        type: "lastQuestion",
                         content: "Less than a week"
                     },
         
                     {
-                        type: "pathThreeSUV",
+                        type: "lastQuestion",
                         content: "2 weeks"
                     },
         
                     {
-                        type: "pathThreeSUV",
+                        type: "lastQuestion",
                         content: "1 month"
                     },
         
                     {
-                        type: "pathThreeSUV",
+                        type: "lastQuestion",
                         content: "More than a month"
                     }
                 ]
             },
+        ],
+        lastQuestion: [
+            {
+                question: "Placeholder for last question",
+                answers: [
+                    {
+                        type: "Done",
+                        content: "Basic"
+                    },
+        
+                    {
+                        type: "Done",
+                        content: "Middle"
+                    },
+                    {
+                        type: "Done",
+                        content: "Loaded"
+                    }
+                ]
+            }
         ]
     }
 ];

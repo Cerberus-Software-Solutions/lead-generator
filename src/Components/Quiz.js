@@ -6,6 +6,8 @@ import QuestionCount from './QuestionCount';
 import AnswerOption from './AnswerOption';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
+import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -48,6 +50,13 @@ function Quiz(props) {
       <div className={classes.root}>
           <Grid container spacing={3}>
             {props.answerOptions.map(renderAnswerOptions)}
+            <Grid item xs={6}>
+              <Button style={{textTransform: 'none'}}>
+                <section id="previous round">
+                    <a className="a" style={{fontSize: 50}}>&#8249;</a>
+                </section>
+              </Button>
+            </Grid>
           </Grid>
         </div>
     );
