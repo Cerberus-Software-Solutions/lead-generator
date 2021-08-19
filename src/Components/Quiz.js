@@ -27,6 +27,20 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'row',
     display: 'inline-block',
   },
+  previous: {
+    padding: theme.spacing(.75),
+    width: '100%',
+    height: '100%',
+    maxWidth: '100%',
+    maxHeight: '100%',
+    backgroundColor: "#00CCCC",
+    borderRadius: "18%",
+    fontWeight: "700",
+    justifyContent: 'flex-start',
+    flexDirection: 'row',
+    display: 'inline-block',
+  }
+
 }));
 
 function Quiz(props) {
@@ -50,16 +64,26 @@ function Quiz(props) {
       <div className={classes.root}>
           <Grid container spacing={3}>
             {props.answerOptions.map(renderAnswerOptions)}
-            <Grid item xs={6}>
-              <Button style={{textTransform: 'none'}}>
-                <section id="previous round">
-                    <a className="a" style={{fontSize: 50}}>&#8249;</a>
-                </section>
-              </Button>
-            </Grid>
           </Grid>
+          {backButton()}
         </div>
     );
+  }
+
+  function backButton(){
+    let boolean = props.questionId > 1;
+    var button;
+    if(boolean) {
+      button = 
+      <Grid container spacing={3}>
+        <Grid item xs={6}>
+          <Button style={{textTransform: 'none'}} onClick={props.onBackButtonClick}>
+              <Paper className={classes.previous} style={{fontSize: 28, color: 'white'}}>&#8249;&#8249;&#8249;</Paper>
+          </Button>
+        </Grid>
+      </Grid>  
+    }
+    return button;
   }
 
   return (

@@ -19,7 +19,8 @@ class App extends Component {
       resumeData: {},
       counter: 0, //counter for the current question in the current path we're in
       currentQuestion: 1,
-      currentPath: "",
+      currentPath: "firstQuestion",
+      prevPath: "firstQuestion",
       question: '',
       answerOptions: [],
       answer: '',
@@ -31,6 +32,7 @@ class App extends Component {
     ReactGA.pageview(window.location.pathname);
 
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
+    this.handleBackButtonClick = this.handleBackButtonClick.bind(this);
   }
 
   getResumeData() {
@@ -69,6 +71,28 @@ class App extends Component {
     }
   }
 
+  handleBackButtonClick(event) {
+    var counter = this.state.counter;
+    var currentQuestion = this.state.currentQuestion;
+    var currentPath = this.state.currentPath;
+    const prevPath = this.state.prevPath;
+
+    if(currentPath !== prevPath) {
+      counter = quizQuestions[0][prevPath].length-1;
+      currentPath = prevPath;
+    }
+    
+    this.setState({
+      question: quizQuestions[0][prevPath][counter].question,
+      answerOptions: quizQuestions[0][prevPath][counter].answers,
+      answer: '',
+      counter: counter - 1,
+      currentQuestion: currentQuestion - 1,
+      currentPath: currentPath,
+      prevPath: prevPath
+    });
+  }
+
   setUserAnswer(answer) {
     this.setState((state, props) => ({
       answersCount: {
@@ -83,9 +107,11 @@ class App extends Component {
     var counter = this.state.counter;
     var currentQuestion = this.state.currentQuestion;
     var currentPath = this.state.currentPath;
+    var prevPath = this.state.prevPath;
 
     if(currentPath !== nextPath) {
       counter = 0;
+      prevPath = currentPath;
       currentPath = nextPath;
     }
     
@@ -95,7 +121,8 @@ class App extends Component {
       answer: '',
       counter: counter + 1,
       currentQuestion: currentQuestion + 1,
-      currentPath: currentPath
+      currentPath: currentPath,
+      prevPath: prevPath
     });
   }
 
@@ -122,6 +149,7 @@ class App extends Component {
         questionId={this.state.currentQuestion}
         question={this.state.question}
         onAnswerSelected={this.handleAnswerSelected}
+        onBackButtonClick={this.handleBackButtonClick}
       />
     );
   }
