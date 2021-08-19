@@ -78,7 +78,7 @@ function Quiz(props) {
       <Grid container spacing={3}>
         <Grid item xs={6}>
           <Button style={{textTransform: 'none'}} onClick={props.onBackButtonClick}>
-              <Paper className={classes.previous} style={{fontSize: 28, color: 'white'}}>&#8249;&#8249;&#8249;</Paper>
+              <Paper className={classes.previous} style={{fontSize: 28, color: 'white'}}>&#160;&#160;&#160;&#8249;&#160;&#160;&#160;</Paper>
           </Button>
         </Grid>
       </Grid>  
