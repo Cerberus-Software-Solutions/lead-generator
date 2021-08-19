@@ -75,18 +75,21 @@ class App extends Component {
     var counter = this.state.counter;
     var currentQuestion = this.state.currentQuestion;
     var currentPath = this.state.currentPath;
-    const prevPath = this.state.prevPath;
+    var prevPath = this.state.prevPath;
 
     if(currentPath !== prevPath) {
-      counter = quizQuestions[0][prevPath].length-1;
+      counter = quizQuestions[0][prevPath].length;
       currentPath = prevPath;
+    } else if(counter > 1) {
+      counter -= 1;
     }
+    prevPath = quizQuestions[0][currentPath][counter - 1].prev;
     
     this.setState({
-      question: quizQuestions[0][prevPath][counter].question,
-      answerOptions: quizQuestions[0][prevPath][counter].answers,
+      question: quizQuestions[0][currentPath][counter - 1].question,
+      answerOptions: quizQuestions[0][currentPath][counter - 1].answers,
       answer: '',
-      counter: counter - 1,
+      counter: counter,
       currentQuestion: currentQuestion - 1,
       currentPath: currentPath,
       prevPath: prevPath
@@ -111,9 +114,9 @@ class App extends Component {
 
     if(currentPath !== nextPath) {
       counter = 0;
-      prevPath = currentPath;
       currentPath = nextPath;
     }
+    prevPath = quizQuestions[0][currentPath][counter].prev;
     
     this.setState({
       question: quizQuestions[0][nextPath][counter].question,

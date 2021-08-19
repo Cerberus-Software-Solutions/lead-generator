@@ -31,6 +31,7 @@ var quizQuestions = [
         pathOne: [
             {
                 question: "New or Used?",
+                prev: "firstQuestion",
                 answers: [
                     {
                         type: "pathOne",
@@ -45,6 +46,7 @@ var quizQuestions = [
             },
             {
                 question: "Gas or Hybrid/Electric?",
+                prev: "pathOne",
                 answers: [
                     {
                         type: "pathOneGasPath",
@@ -61,6 +63,7 @@ var quizQuestions = [
         pathOneGasPath: [
             {
                 question: "Monthly Budget?",
+                prev: "pathOne",
                 answers: [
                     {
                         type: "pathOneGasPath",
@@ -93,6 +96,7 @@ var quizQuestions = [
             },
             {
                 question: "Are you trading in a vehicle?",
+                prev: "pathOneGasPath",
                 answers: [
                     {
                         type: "pathOneGasPath",
@@ -106,6 +110,7 @@ var quizQuestions = [
             },
             {
                 question: "Choose one of the following:",
+                prev: "pathOneGasPath",
                 answers: [
                     {
                         type: "pathOneGasPath",
@@ -124,6 +129,7 @@ var quizQuestions = [
             },
             {
                 question: "Year and Mileage",
+                prev: "pathOneGasPath",
                 answers: [
                     {
                         type: "pathOneGasPath",
@@ -133,6 +139,7 @@ var quizQuestions = [
             },
             {
                 question: "What features/packages are you looking for?",
+                prev: "pathOneGasPath",
                 answers: [
                     {
                         type: "pathOneGasPath",
@@ -151,33 +158,54 @@ var quizQuestions = [
             },
             {
                 question: "When were you looking to purchase?",
+                prev: "pathOneGasPath",
                 answers: [
                     {
-                        type: "lastQuestion",
+                        type: "pathOneGasPath",
                         content: "Less than a week"
                     },
         
                     {
-                        type: "lastQuestion",
+                        type: "pathOneGasPath",
                         content: "2 weeks"
                     },
         
                     {
-                        type: "lastQuestion",
+                        type: "pathOneGasPath",
                         content: "1 month"
                     },
         
                     {
-                        type: "lastQuestion",
+                        type: "pathOneGasPath",
                         content: "More than a month"
                     }
                 ]
             },
+            {
+                question: "Placeholder for last question",
+                prev: "pathOneGasPath",
+                answers: [
+                    {
+                        type: "Done",
+                        content: "Basic"
+                    },
+        
+                    {
+                        type: "Done",
+                        content: "Middle"
+                    },
+                    {
+                        type: "Done",
+                        content: "Loaded"
+                    }
+                ]
+            }
         ],
         //PATH FOR IF THEY PICK HYBRID/ELECTRIC
         pathOneHybrid: [
             {
                 question: "Which type are you looking for?",
+                prev: "pathOne",
                 answers: [
                     {
                         type: "pathOneHybrid",
@@ -196,6 +224,7 @@ var quizQuestions = [
             },
             {
                 question: "Choose one of the following:",
+                prev: "pathOneHybrid",
                 answers: [
                     {
                         type: "pathOneHybrid",
@@ -214,6 +243,7 @@ var quizQuestions = [
             },
             {
                 question: "Monthly Budget?",
+                prev: "pathOneHybrid",
                 answers: [
                     {
                         type: "pathOneHybrid",
@@ -246,6 +276,7 @@ var quizQuestions = [
             },
             {
                 question: "Are you trading in a vehicle?",
+                prev: "pathOneHybrid",
                 answers: [
                     {
                         type: "pathOneHybrid",
@@ -260,6 +291,7 @@ var quizQuestions = [
             },
             {
                 question: "Year and Mileage",
+                prev: "pathOneHybrid",
                 answers: [
                     {
                         type: "pathOneHybrid",
@@ -269,6 +301,7 @@ var quizQuestions = [
             },
             {
                 question: "What features/packages are you looking for?",
+                prev: "pathOneHybrid",
                 answers: [
                     {
                         type: "pathOneHybrid",
@@ -287,32 +320,53 @@ var quizQuestions = [
             },
             {
                 question: "When were you looking to purchase?",
+                prev: "pathOneHybrid",
                 answers: [
                     {
-                        type: "lastQuestion",
+                        type: "pathOneHybrid",
                         content: "Less than a week"
                     },
         
                     {
-                        type: "lastQuestion",
+                        type: "pathOneHybrid",
                         content: "2 weeks"
                     },
         
                     {
-                        type: "lastQuestion",
+                        type: "pathOneHybrid",
                         content: "1 month"
                     },
         
                     {
-                        type: "lastQuestion",
+                        type: "pathOneHybrid",
                         content: "More than a month"
                     }
                 ]
             },
+            {
+                question: "Placeholder for last question",
+                prev: "pathOneHybrid",
+                answers: [
+                    {
+                        type: "Done",
+                        content: "Basic"
+                    },
+        
+                    {
+                        type: "Done",
+                        content: "Middle"
+                    },
+                    {
+                        type: "Done",
+                        content: "Loaded"
+                    }
+                ]
+            }
         ],
         pathTwo: [
             {
                 question: "New or Used?",
+                prev: "firstQuestion",
                 answers: [
                     {
                         type: "pathTwo",
@@ -327,6 +381,7 @@ var quizQuestions = [
             },
             {
                 question: "Monthly Budget?",
+                prev: "pathTwo",
                 answers: [
                     {
                         type: "pathTwo",
@@ -350,6 +405,7 @@ var quizQuestions = [
             },
             {
                 question: "Are you trading in a vehicle?",
+                prev: "pathTwo",
                 answers: [
                     {
                         type: "pathTwo",
@@ -364,6 +420,7 @@ var quizQuestions = [
             },
             {
                 question: "What size of Truck are you looking for?",
+                prev: "pathTwo",
                 answers: [
                     {
                         type: "pathTwo",
@@ -378,6 +435,7 @@ var quizQuestions = [
             },
             {
                 question: "Year and Mileage",
+                prev: "pathTwo",
                 answers: [
                     {
                         type: "pathTwo",
@@ -387,6 +445,7 @@ var quizQuestions = [
             },
             {
                 question: "What features and packages are you looking for? (select all that applies)",
+                prev: "pathTwo",
                 answers: [
                     {
                         type: "pathTwo",
@@ -396,32 +455,53 @@ var quizQuestions = [
             },
             {
                 question: "When were you looking to purchase?",
+                prev: "pathTwo",
                 answers: [
                     {
-                        type: "lastQuestion",
+                        type: "pathTwo",
                         content: "Less than a week"
                     },
         
                     {
-                        type: "lastQuestion",
+                        type: "pathTwo",
                         content: "2 weeks"
                     },
         
                     {
-                        type: "lastQuestion",
+                        type: "pathTwo",
                         content: "1 month"
                     },
         
                     {
-                        type: "lastQuestion",
+                        type: "pathTwo",
                         content: "More than a month"
                     }
                 ]
             },
+            {
+                question: "Placeholder for last question",
+                prev: "pathTwo",
+                answers: [
+                    {
+                        type: "Done",
+                        content: "Basic"
+                    },
+        
+                    {
+                        type: "Done",
+                        content: "Middle"
+                    },
+                    {
+                        type: "Done",
+                        content: "Loaded"
+                    }
+                ]
+            }
         ],
         pathThree:[
             {
                 question: "Which type were you looking for?",
+                prev: "firstQuestion",
                 answers: [
                     {
                         type: "pathThreeCar",
@@ -438,6 +518,7 @@ var quizQuestions = [
         pathThreeCar: [
             {
                 question: "Which model are you interted in?",
+                prev: "pathThree",
                 answers: [
                     {
                         type: "pathThreeCar",
@@ -452,6 +533,7 @@ var quizQuestions = [
             },
             {
                 question: "Monthly Budget?",
+                prev: "pathThreeCar",
                 answers: [
                     {
                         type: "pathThreeCar",
@@ -484,6 +566,7 @@ var quizQuestions = [
             },
             {
                 question: "Are you trading in a vehicle?",
+                prev: "pathThreeCar",
                 answers: [
                     {
                         type: "pathThreeCar",
@@ -498,6 +581,7 @@ var quizQuestions = [
             },
             {
                 question: "What features/packages are you looking for?",
+                prev: "pathThreeCar",
                 answers: [
                     {
                         type: "pathThreeCar",
@@ -516,32 +600,53 @@ var quizQuestions = [
             },
             {
                 question: "When were you looking to purchase?",
+                prev: "pathThreeCar",
                 answers: [
                     {
-                        type: "lastQuestion",
+                        type: "pathThreeCar",
                         content: "Less than a week"
                     },
         
                     {
-                        type: "lastQuestion",
+                        type: "pathThreeCar",
                         content: "2 weeks"
                     },
         
                     {
-                        type: "lastQuestion",
+                        type: "pathThreeCar",
                         content: "1 month"
                     },
         
                     {
-                        type: "lastQuestion",
+                        type: "pathThreeCar",
                         content: "More than a month"
                     }
                 ]
             },
+            {
+                question: "Placeholder for last question",
+                prev: "pathThreeCar",
+                answers: [
+                    {
+                        type: "Done",
+                        content: "Basic"
+                    },
+        
+                    {
+                        type: "Done",
+                        content: "Middle"
+                    },
+                    {
+                        type: "Done",
+                        content: "Loaded"
+                    }
+                ]
+            }
         ],
         pathThreeSUV: [
             {
                 question: "Which model are you interested in?",
+                prev: "pathThree",
                 answers: [
                     {
                         type: "pathThreeSUV",
@@ -568,6 +673,7 @@ var quizQuestions = [
             },
             {
                 question: "Monthly Budget?",
+                prev: "pathThreeSUV",
                 answers: [
                     {
                         type: "pathThreeSUV",
@@ -600,6 +706,7 @@ var quizQuestions = [
             },
             {
                 question: "Are you trading in a vehicle?",
+                prev: "pathThreeSUV",
                 answers: [
                     {
                         type: "pathThreeSUV",
@@ -614,6 +721,7 @@ var quizQuestions = [
             },
             {
                 question: "What features/packages are you looking for?",
+                prev: "pathThreeSUV",
                 answers: [
                     {
                         type: "pathThreeSUV",
@@ -632,32 +740,32 @@ var quizQuestions = [
             },
             {
                 question: "When were you looking to purchase?",
+                prev: "pathThreeSUV",
                 answers: [
                     {
-                        type: "lastQuestion",
+                        type: "pathThreeSUV",
                         content: "Less than a week"
                     },
         
                     {
-                        type: "lastQuestion",
+                        type: "pathThreeSUV",
                         content: "2 weeks"
                     },
         
                     {
-                        type: "lastQuestion",
+                        type: "pathThreeSUV",
                         content: "1 month"
                     },
         
                     {
-                        type: "lastQuestion",
+                        type: "pathThreeSUV",
                         content: "More than a month"
                     }
                 ]
             },
-        ],
-        lastQuestion: [
             {
                 question: "Placeholder for last question",
+                prev: "pathThreeSUV",
                 answers: [
                     {
                         type: "Done",
@@ -674,7 +782,7 @@ var quizQuestions = [
                     }
                 ]
             }
-        ]
+        ],
     }
 ];
   
