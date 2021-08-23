@@ -44,16 +44,17 @@ const useStyles = makeStyles((theme) => ({
   },
 
   h1: {
-    textAlign: 'center'
+    textAlign: 'center',
+    marginTop: '20px'
   },
 
   inputBox: {
-    marginTop: 20,
-    marginBottom: 20,
-    display: 'block'
-  },
+      '& > *': {
+        margin: theme.spacing(1),
+        width: '75ch',
 
-
+      },
+    },
 }));
 
 function Quiz(props) {
@@ -64,8 +65,10 @@ function Quiz(props) {
         key={key.content}
         answerContent={key.content}
         answerType={key.type}
+        answerPackageOptions={key.packageOptions}
         answer={props.answer}
         questionId={props.questionId}
+        question={props.question}
         onAnswerSelected={props.onAnswerSelected}
         classes={classes}
       />
@@ -73,32 +76,27 @@ function Quiz(props) {
   }
 
    function createMCQuiz(){
+     console.log(props.answerOptions)
     return (
-      
       <div className={classes.root}>
           <Grid container spacing={3}>
             {props.answerOptions.map(renderAnswerOptions)}
           </Grid>
-          {budgetFormat()}
+          {addTextfield()}
           {backButton()}
         </div>
     );
   }
 
-  function budgetFormat(){
-    let boolean = props.question === "Monthly Budget?";
+  function addTextfield(){
     var format;
-    if(boolean){
-      format =        
-      <div>
-         <h1  className={classes.h1} style={{textTransform: 'none', fontSize: 23}}>Prefer to pay in cash? Enter the full amount below</h1>
-          <form noValidate autoComplete="off">
-            <TextField className={classes.inputBox}
-              label="Note Title" 
-              variant="outlined" 
-              fullWidth
-            />
-         </form>
+    if(props.hasInput){
+      format =
+      <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', flexDirection:'column'}}>
+          <h1  className={classes.h1} style={{textTransform: 'none', fontSize: 23}}>{props.inputContent}</h1>
+          <form className={classes.inputBox} noValidate autoComplete="off">
+            <TextField id="outlined-basic" label="Enter your response here" variant="outlined" inputProps={{min: 0, style: { textAlign: 'center' }}} />
+          </form>
       </div>  
     }
     return format;

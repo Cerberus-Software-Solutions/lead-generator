@@ -544,7 +544,7 @@ select {
    max-width: 100%;
    font-size: 15px;
    line-height: 24px;
-   color: #00ffff;
+   color: #000000;
 
 }
 
@@ -556,7 +556,7 @@ select {
    input[type="password"]:focus,
    input[type="email"]:focus,
    textarea:focus {
-      color: #B3B7BC;
+      color: #000000;
    }
    
    textarea { min-height: 220px; }

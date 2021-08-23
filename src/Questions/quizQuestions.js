@@ -64,6 +64,8 @@ var quizQuestions = [
             {
                 question: "Monthly Budget?",
                 prev: "pathOne",
+                hasInput: true,
+                inputContent: "Prefer to pay in cash? Enter the full amount below",
                 answers: [
                     {
                         type: "pathOneGasPath",
@@ -174,6 +176,8 @@ var quizQuestions = [
             {
                 question: "What features/packages are you looking for?",
                 prev: "pathOneGasPath",
+                hasInput: true,
+                inputContent: "Got a trim/model in mind? Describe it below",
                 answers: [
                     {
                         type: "pathOneGasPath",
@@ -278,6 +282,8 @@ var quizQuestions = [
             {
                 question: "Monthly Budget?",
                 prev: "pathOneHybrid",
+                hasInput: true,
+                inputContent: "Prefer to pay in cash? Enter the full amount below",
                 answers: [
                     {
                         type: "pathOneHybrid",
@@ -370,19 +376,35 @@ var quizQuestions = [
             {
                 question: "What features/packages are you looking for?",
                 prev: "pathOneHybrid",
+                hasInput: true,
+                inputContent: "Got a trim/model in mind? Describe it below",
                 answers: [
                     {
                         type: "pathOneHybrid",
-                        content: "Basic"
+                        content: "Basic",
+                        packageOptions: [
+                            "-try to type! big chungus",
+                            "Big Chungus1",
+                            "a",
+                            "b"
+                        ]
                     },
         
                     {
                         type: "pathOneHybrid",
-                        content: "Middle"
+                        content: "Middle",
+                        packageOptions: [
+                            "-try to type!",
+                            "Big Chungus2"
+                        ]
                     },
                     {
                         type: "pathOneHybrid",
-                        content: "Loaded"
+                        content: "Loaded",
+                        packageOptions: [
+                            "-try to type!",
+                            "Big Chungus3"
+                        ]
                     }
                 ]
             },
@@ -450,6 +472,8 @@ var quizQuestions = [
             {
                 question: "Monthly Budget?",
                 prev: "pathTwo",
+                hasInput: true,
+                inputContent: "Prefer to pay in cash? Enter the full amount below",
                 answers: [
                     {
                         type: "pathTwo",
@@ -489,6 +513,8 @@ var quizQuestions = [
             {
                 question: "What size of Truck are you looking for?",
                 prev: "pathTwo",
+                hasInput: true,
+                inputContent: "Got another idea? Describe it below",
                 answers: [
                     {
                         type: "pathTwo",
@@ -548,6 +574,8 @@ var quizQuestions = [
             {
                 question: "What features and packages are you looking for? (select all that applies)",
                 prev: "pathTwo",
+                hasInput: true,
+                inputContent: "Got a trim/model in mind? Describe it below",
                 answers: [
                     {
                         type: "pathTwo",
@@ -636,6 +664,8 @@ var quizQuestions = [
             {
                 question: "Monthly Budget?",
                 prev: "pathThreeCar",
+                hasInput: true,
+                inputContent: "Prefer to pay in cash? Enter the full amount below",
                 answers: [
                     {
                         type: "pathThreeCar",
@@ -684,6 +714,8 @@ var quizQuestions = [
             {
                 question: "What features/packages are you looking for?",
                 prev: "pathThreeCar",
+                hasInput: true,
+                inputContent: "Got a trim/model in mind? Describe it below",
                 answers: [
                     {
                         type: "pathThreeCar",
@@ -776,6 +808,8 @@ var quizQuestions = [
             {
                 question: "Monthly Budget?",
                 prev: "pathThreeSUV",
+                hasInput: true,
+                inputContent: "Prefer to pay in cash? Enter the full amount below",
                 answers: [
                     {
                         type: "pathThreeSUV",
@@ -824,6 +858,8 @@ var quizQuestions = [
             {
                 question: "What features/packages are you looking for?",
                 prev: "pathThreeSUV",
+                hasInput: true,
+                inputContent: "Got a trim/model in mind? Describe it below",
                 answers: [
                     {
                         type: "pathThreeSUV",
