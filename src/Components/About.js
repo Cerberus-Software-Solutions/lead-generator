@@ -24,7 +24,6 @@ class About extends Component {
               />
             </div>
             <div className="nine columns main-col">
-              <TextField/>
               <h2>About Me</h2>
 
               <p>{bio}</p>
