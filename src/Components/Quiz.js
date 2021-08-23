@@ -8,6 +8,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
+import TextField from '@material-ui/core/TextField';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -39,7 +41,18 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'flex-start',
     flexDirection: 'row',
     display: 'inline-block',
-  }
+  },
+
+  h1: {
+    textAlign: 'center'
+  },
+
+  inputBox: {
+    marginTop: 20,
+    marginBottom: 20,
+    display: 'block'
+  },
+
 
 }));
 
@@ -61,13 +74,34 @@ function Quiz(props) {
 
    function createMCQuiz(){
     return (
+      
       <div className={classes.root}>
           <Grid container spacing={3}>
             {props.answerOptions.map(renderAnswerOptions)}
           </Grid>
+          {budgetFormat()}
           {backButton()}
         </div>
     );
+  }
+
+  function budgetFormat(){
+    let boolean = props.question === "Monthly Budget?";
+    var format;
+    if(boolean){
+      format =        
+      <div>
+         <h1  className={classes.h1} style={{textTransform: 'none', fontSize: 23}}>Prefer to pay in cash? Enter the full amount below</h1>
+          <form noValidate autoComplete="off">
+            <TextField className={classes.inputBox}
+              label="Note Title" 
+              variant="outlined" 
+              fullWidth
+            />
+         </form>
+      </div>  
+    }
+    return format;
   }
 
   function backButton(){

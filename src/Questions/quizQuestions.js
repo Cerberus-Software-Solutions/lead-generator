@@ -128,12 +128,46 @@ var quizQuestions = [
                 ]
             },
             {
-                question: "Year and Mileage",
+                question: "What year were you looking for?",
                 prev: "pathOneGasPath",
                 answers: [
                     {
                         type: "pathOneGasPath",
-                        content: "Yes"
+                        content: "2014-2015"
+                    },
+                    {
+                        type: "pathOneGasPath",
+                        content: "2016-2017"
+                    },
+                    {
+                        type: "pathOneGasPath",
+                        content: "2018-2019"
+                    },
+                    {
+                        type: "pathOneGasPath",
+                        content: "2020-2021+"
+                    }
+                ]
+            },
+            {
+                question: "What mileage do you expect?",
+                prev: "pathOneGasPath",
+                answers: [
+                    {
+                        type: "pathOneGasPath",
+                        content: "0-20 000"
+                    },
+                    {
+                        type: "pathOneGasPath",
+                        content: "30 000-60 000"
+                    },
+                    {
+                        type: "pathOneGasPath",
+                        content: "70 000-100 000"
+                    },
+                    {
+                        type: "pathOneGasPath",
+                        content: "More than 100 000"
                     }
                 ]
             },
@@ -290,12 +324,46 @@ var quizQuestions = [
                 ]
             },
             {
-                question: "Year and Mileage",
+                question: "What year were you looking for?",
                 prev: "pathOneHybrid",
                 answers: [
                     {
                         type: "pathOneHybrid",
-                        content: "Yes"
+                        content: "2014-2015"
+                    },
+                    {
+                        type: "pathOneHybrid",
+                        content: "2016-2017"
+                    },
+                    {
+                        type: "pathOneHybrid",
+                        content: "2018-2019"
+                    },
+                    {
+                        type: "pathOneHybrid",
+                        content: "2020-2021+"
+                    }
+                ]
+            },
+            {
+                question: "What mileage do you expect?",
+                prev: "pathOneHybrid",
+                answers: [
+                    {
+                        type: "pathOneHybrid",
+                        content: "0-20 000"
+                    },
+                    {
+                        type: "pathOneHybrid",
+                        content: "30 000-60 000"
+                    },
+                    {
+                        type: "pathOneHybrid",
+                        content: "70 000-100 000"
+                    },
+                    {
+                        type: "pathOneHybrid",
+                        content: "More than 100 000"
                     }
                 ]
             },
@@ -434,12 +502,46 @@ var quizQuestions = [
                 ]
             },
             {
-                question: "Year and Mileage",
+                question: "What year were you looking for?",
                 prev: "pathTwo",
                 answers: [
                     {
                         type: "pathTwo",
-                        content: "Yes"
+                        content: "2014-2015"
+                    },
+                    {
+                        type: "pathTwo",
+                        content: "2016-2017"
+                    },
+                    {
+                        type: "pathTwo",
+                        content: "2018-2019"
+                    },
+                    {
+                        type: "pathTwo",
+                        content: "2020-2021+"
+                    }
+                ]
+            },
+            {
+                question: "What mileage do you expect?",
+                prev: "pathTwo",
+                answers: [
+                    {
+                        type: "pathTwo",
+                        content: "0-20 000"
+                    },
+                    {
+                        type: "pathTwo",
+                        content: "30 000-60 000"
+                    },
+                    {
+                        type: "pathTwo",
+                        content: "70 000-100 000"
+                    },
+                    {
+                        type: "pathTwo",
+                        content: "More than 100 000"
                     }
                 ]
             },

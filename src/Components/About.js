@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Fade from "react-reveal";
+import TextField from '@material-ui/core/TextField';
 
 class About extends Component {
   render() {
@@ -23,11 +24,13 @@ class About extends Component {
               />
             </div>
             <div className="nine columns main-col">
+              <TextField/>
               <h2>About Me</h2>
 
               <p>{bio}</p>
               <div className="row">
                 <div className="columns contact-details">
+
                   <h2>Contact Details</h2>
                   <p className="address">
                     <span>{name}</span>

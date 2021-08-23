@@ -87,7 +87,7 @@ pre {
    word-wrap: break-word;
 }
 
-blockquote, q { quotes: &#8220 &#8220; }
+
 
 blockquote:before, blockquote:after,
 q:before, q:after {
@@ -544,7 +544,7 @@ select {
 	max-width: 100%;
    font-size: 15px;
    line-height: 24px;
-	color: #647373;
+	color: #00ffff;
 	background: #D3D9D9;
 
 }
