@@ -10,7 +10,7 @@ import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
 
-
+const DONE_QUIZ = "Done";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -38,23 +38,28 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#00CCCC",
     borderRadius: "18%",
     fontWeight: "700",
-    justifyContent: 'flex-start',
-    flexDirection: 'row',
-    display: 'inline-block',
+  },
+  finish: {
+    padding: theme.spacing(.75),
+    width: '100%',
+    height: '100%',
+    maxWidth: '100%',
+    maxHeight: '100%',
+    backgroundColor: "#00CCCC",
+    borderRadius: "10%",
+    fontWeight: "700",
   },
 
   h1: {
     textAlign: 'center',
     marginTop: '20px'
   },
-
   inputBox: {
       '& > *': {
-        margin: theme.spacing(1),
+        marginTop: theme.spacing(1),
         width: '75ch',
-
       },
-    },
+  },
 }));
 
 function Quiz(props) {
@@ -76,10 +81,9 @@ function Quiz(props) {
   }
 
    function createMCQuiz(){
-     console.log(props.answerOptions)
     return (
       <div className={classes.root}>
-          <Grid container spacing={3}>
+          <Grid container direction="row" justifyContent="center">
             {props.answerOptions.map(renderAnswerOptions)}
           </Grid>
           {addTextfield()}
@@ -107,15 +111,31 @@ function Quiz(props) {
     var button;
     if(boolean) {
       button = 
-      <Grid container spacing={3}>
-        <Grid item xs={6}>
-          <Button style={{textTransform: 'none'}} onClick={props.onBackButtonClick}>
-              <Paper className={classes.previous} style={{fontSize: 28, color: 'white'}}>&#160;&#160;&#160;&#8249;&#160;&#160;&#160;</Paper>
-          </Button>
-        </Grid>
+      <Grid container direction="row" justifyContent={props.answerOptions[0].type === DONE_QUIZ ? "space-around":"space-between"}  alignItems="center">
+        <Grid>
+            <Button style={{textTransform: 'none'}} onClick={props.onBackButtonClick}>
+                <Paper className={classes.previous} style={{fontSize: 28, color: 'white'}}>&#160;&#160;&#160;&#8249;&#160;&#160;&#160;</Paper>
+            </Button>
+          </Grid>
+          <Grid></Grid>
+          {finishButton()}
       </Grid>  
     }
     return button;
+  }
+
+  function finishButton() {
+    let boolean = props.answerOptions[0].type === DONE_QUIZ;
+    var finishButton;
+    if(boolean) {
+      finishButton = 
+        <Grid>
+          <Button style={{textTransform: 'none'}} value={"Done"} onClick={props.onAnswerSelected}>
+              <Paper className={classes.finish} style={{fontSize: 28, color: 'white'}}>&#160;&#160;&#160;Finish&#160;&#160;&#160;</Paper>
+          </Button>
+        </Grid>
+    }
+    return finishButton;
   }
 
   return (

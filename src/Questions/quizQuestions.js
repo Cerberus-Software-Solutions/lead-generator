@@ -181,16 +181,30 @@ var quizQuestions = [
                 answers: [
                     {
                         type: "pathOneGasPath",
-                        content: "Basic"
+                        content: "Basic",
+                        packageOptions: [
+                            "-try to type! big chungus",
+                            "Big Chungus1",
+                            "a",
+                            "b"
+                        ]
                     },
         
                     {
                         type: "pathOneGasPath",
-                        content: "Middle"
+                        content: "Middle",
+                        packageOptions: [
+                            "-try to type!",
+                            "Big Chungus2"
+                        ]
                     },
                     {
                         type: "pathOneGasPath",
-                        content: "Loaded"
+                        content: "Loaded",
+                        packageOptions: [
+                            "-try to type!",
+                            "Big Chungus3"
+                        ]
                     }
                 ]
             },
@@ -220,21 +234,20 @@ var quizQuestions = [
                 ]
             },
             {
-                question: "Placeholder for last question",
+                question: "Please provide your contact information",
                 prev: "pathOneGasPath",
                 answers: [
                     {
                         type: "Done",
-                        content: "Basic"
-                    },
-        
-                    {
-                        type: "Done",
-                        content: "Middle"
+                        content: "Name"
                     },
                     {
                         type: "Done",
-                        content: "Loaded"
+                        content: "Phone number"
+                    },
+                    {
+                        type: "Done",
+                        content: "Email"
                     }
                 ]
             }
@@ -579,8 +592,40 @@ var quizQuestions = [
                 answers: [
                     {
                         type: "pathTwo",
-                        content: "Yes"
-                    }
+                        content: "Basic                                                         "
+                    },
+                    {
+                        type: "pathTwo",
+                        content: "Middle"
+                    },
+                    {
+                        type: "pathTwo",
+                        content: "Loaded"
+                    },
+                    {
+                        type: "pathTwo",
+                        content: "Two door"
+                    },
+                    {
+                        type: "pathTwo",
+                        content: "Quad cab"
+                    },
+                    {
+                        type: "pathTwo",
+                        content: "Crew cab"
+                    },
+                    {
+                        type: "pathTwo",
+                        content: "Short box"
+                    },
+                    {
+                        type: "pathTwo",
+                        content: "Regular box"
+                    },
+                    {
+                        type: "pathTwo",
+                        content: "Extended box"
+                    },
                 ]
             },
             {
