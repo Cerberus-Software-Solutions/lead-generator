@@ -53,7 +53,7 @@ function AnswerOption(props) {
       )
     case 'truck': 
       return (
-        <Grid item xs={4} style={{paddingLeft:"55px"}}>
+        <Grid item xs={4} style={{paddingLeft:"30px"}}>
           <FormControlLabel
             control={ <Checkbox className={styles.size} name="gilad"/> }
             label={<Typography style={{fontSize: 20, color: "black"}}>{props.answerContent}</Typography>}

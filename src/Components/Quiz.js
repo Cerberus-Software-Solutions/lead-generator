@@ -9,6 +9,7 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
+import Typography from '@material-ui/core/Typography';
 
 const DONE_QUIZ = "Done";
 const useStyles = makeStyles((theme) => ({
@@ -96,10 +97,10 @@ function Quiz(props) {
     var format;
     if(props.hasInput){
       format =
-      <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', flexDirection:'column'}}>
+      <div style={{display: 'flex', alignItems:'center', flexDirection:'column'}}>
           <h1  className={classes.h1} style={{textTransform: 'none', fontSize: 23}}>{props.inputContent}</h1>
           <form className={classes.inputBox} noValidate autoComplete="off">
-            <TextField id="outlined-basic" label="Enter your response here" variant="outlined" inputProps={{min: 0, style: { textAlign: 'center' }}} />
+            <TextField id="outlined-basic" label={<Typography style={{fontSize: 15, color: "black"}}>Enter your response here</Typography>} variant="outlined" inputProps={{min: 0, style: { textAlign: 'center' }}} />
           </form>
       </div>  
     }
@@ -118,8 +119,23 @@ function Quiz(props) {
             </Button>
           </Grid>
           <Grid></Grid>
+          {nextButton()}
           {finishButton()}
       </Grid>  
+    }
+    return button;
+  }
+
+  function nextButton() {
+    let boolean = props.question === "What features and packages are you looking for? (select all that applies)";
+    var button;
+    if(boolean) {
+      button = 
+      <Grid>
+        <Button style={{textTransform: 'none'}} value={props.answerOptions[props.currentQuestion].type} onClick={props.onAnswerSelected}>
+            <Paper className={classes.previous} style={{fontSize: 28, color: 'white'}}>&#160;&#160;&#160;&#8250;&#160;&#160;&#160;</Paper>
+        </Button>
+      </Grid>
     }
     return button;
   }

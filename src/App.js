@@ -131,7 +131,7 @@ class App extends Component {
       currentPath: currentPath,
       prevPath: prevPath,
       hasInput: quizQuestions[0][nextPath][counter].hasInput === undefined ? false : quizQuestions[0][nextPath][counter].hasInput,
-      inputContent:quizQuestions[0][nextPath][counter].inputContent === undefined ? '' : quizQuestions[0][nextPath][counter].inputContent,
+      inputContent: quizQuestions[0][nextPath][counter].inputContent === undefined ? '' : quizQuestions[0][nextPath][counter].inputContent,
     });
   }
 
@@ -161,6 +161,7 @@ class App extends Component {
         onBackButtonClick={this.handleBackButtonClick}
         hasInput={this.state.hasInput}
         inputContent={this.state.inputContent}
+        currentQuestion={this.state.counter}
       />
     );
   }
