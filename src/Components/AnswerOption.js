@@ -18,7 +18,7 @@ const styles = {
   },
 };
 
-var textFieldValue = "";
+
 
 function quizType(props) {
   var type = "default"
@@ -40,7 +40,21 @@ function packgageItems(item){
   );
 }
 
+
+
 function AnswerOption(props) {
+  const [state, setState] = React.useState({
+    Basic: false,
+    Middle: false,
+    Loaded: false,
+  });
+
+  const handleChange = (event) => {
+    setState({ ...state, [event.target.name]: event.target.checked });
+    console.log(state);
+  };
+
+  // eslint-disable-next-line default-case
   switch(quizType(props)) {
     case 'package': 
       return(
@@ -59,7 +73,7 @@ function AnswerOption(props) {
       return (
         <Grid item xs={4} style={{paddingLeft:"30px"}}>
           <FormControlLabel
-            control={ <Checkbox className={styles.size} name="gilad"/> }
+            control={ <Checkbox className={styles.size} onChange={handleChange} name={props.answerContent}/> }
             label={<Typography style={{fontSize: 20, color: "black"}}>{props.answerContent}</Typography>}
           />
         </Grid>
