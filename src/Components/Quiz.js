@@ -12,6 +12,12 @@ import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 
 const DONE_QUIZ = "Done";
+
+var generalTextFieldValue = "";
+var nameTextFieldValue = "";
+var phoneTextFieldValue = "";
+var emailTextFieldValue = "";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -76,9 +82,25 @@ function Quiz(props) {
         questionId={props.questionId}
         question={props.question}
         onAnswerSelected={props.onAnswerSelected}
+        handleTextFieldChange={props.handleTextFieldChange}
+        onChangeName={onChangeName}
+        onChangePhone={onChangePhone}
+        onChangeEmail={onChangeEmail}
         classes={classes}
       />
     );
+  }
+
+  function onChangeName(newName) {
+    nameTextFieldValue = newName;
+  }
+
+  function onChangePhone(newPhone) {
+    phoneTextFieldValue = newPhone;
+  }
+
+  function onChangeEmail(newEmail) {
+    emailTextFieldValue = newEmail;
   }
 
    function createMCQuiz(){
@@ -104,7 +126,9 @@ function Quiz(props) {
       <div style={{display: 'flex', alignItems:'center', flexDirection:'column'}}>
           <h1  className={classes.h1} style={{textTransform: 'none', fontSize: 23}}>{props.inputContent}</h1>
           <form className={classes.inputBox} noValidate autoComplete="off" onSubmit={handleSubmit}>
-            <TextField id="outlined-basic"  style={{textAlign: 'left'}} label={<Typography style={{fontSize: 20, color: "black"}}>Enter your response here (then press next arrow)</Typography>} variant="outlined" inputProps={{min: 0, style: { textAlign: 'left', paddingTop: 30, fontSize: 20}}} />
+            <TextField onChange={(event) => {
+              generalTextFieldValue = event.target.value;
+            }} id="outlined-basic" style={{textAlign: 'left'}} label={<Typography style={{fontSize: 20, color: "black"}}>Enter your response here (then press next arrow)</Typography>} variant="outlined" inputProps={{min: 0, style: { textAlign: 'left', paddingTop: 30, fontSize: 20}}} />
           </form>
       </div>  
     }
@@ -135,7 +159,12 @@ function Quiz(props) {
     if(props.hasInput) {
       button = 
       <Grid>
-        <Button style={{textTransform: 'none'}} value={props.answerOptions[0].type} onClick={props.onAnswerSelected}>
+        <Button style={{textTransform: 'none'}} value={props.answerOptions[0].type} onClick={() => {
+            if(generalTextFieldValue !== "") {
+              props.onAnswerSelected(props.question, generalTextFieldValue, props.answerOptions[0].type);
+              generalTextFieldValue = "";
+            }
+          }}>
             <Paper className={classes.previous} style={{fontSize: 28, color: 'white'}}>&#160;&#160;&#160;&#8250;&#160;&#160;&#160;</Paper>
         </Button>
       </Grid>
@@ -149,7 +178,19 @@ function Quiz(props) {
     if(boolean) {
       finishButton = 
         <Grid>
-          <Button style={{textTransform: 'none'}} value={"Done"} onClick={props.onAnswerSelected}>
+          <Button style={{textTransform: 'none'}} value={"Done"} onClick={() => {
+              if(nameTextFieldValue !== "" && phoneTextFieldValue !== "" && emailTextFieldValue !== "") {
+                props.onAnswerSelected(props.question, 
+                {
+                  name: nameTextFieldValue,
+                  phone: phoneTextFieldValue,
+                  email: emailTextFieldValue
+                }, props.answerOptions[0].type);
+                nameTextFieldValue = "";
+                phoneTextFieldValue = "";
+                emailTextFieldValue = "";
+              }
+            }}>
               <Paper className={classes.finish} style={{fontSize: 28, color: 'white'}}>&#160;&#160;&#160;Finish&#160;&#160;&#160;</Paper>
           </Button>
         </Grid>

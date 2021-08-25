@@ -239,16 +239,8 @@ var quizQuestions = [
                 answers: [
                     {
                         type: "Done",
-                        content: "Name"
+                        content: "Name, Phone Number, Email, etc."
                     },
-                    {
-                        type: "Done",
-                        content: "Phone number"
-                    },
-                    {
-                        type: "Done",
-                        content: "Email"
-                    }
                 ]
             }
         ],
@@ -448,19 +440,11 @@ var quizQuestions = [
             },
             {
                 question: "Please provide your contact information",
-                prev: "pathOneGasPath",
+                prev: "pathOneHybrid",
                 answers: [
                     {
                         type: "Done",
                         content: "Name"
-                    },
-                    {
-                        type: "Done",
-                        content: "Phone number"
-                    },
-                    {
-                        type: "Done",
-                        content: "Email"
                     }
                 ]
             }
@@ -659,14 +643,6 @@ var quizQuestions = [
                     {
                         type: "Done",
                         content: "Name"
-                    },
-                    {
-                        type: "Done",
-                        content: "Phone number"
-                    },
-                    {
-                        type: "Done",
-                        content: "Email"
                     }
                 ]
             }
@@ -821,14 +797,6 @@ var quizQuestions = [
                     {
                         type: "Done",
                         content: "Name"
-                    },
-                    {
-                        type: "Done",
-                        content: "Phone number"
-                    },
-                    {
-                        type: "Done",
-                        content: "Email"
                     }
                 ]
             }
@@ -978,14 +946,6 @@ var quizQuestions = [
                     {
                         type: "Done",
                         content: "Name"
-                    },
-                    {
-                        type: "Done",
-                        content: "Phone number"
-                    },
-                    {
-                        type: "Done",
-                        content: "Email"
                     }
                 ]
             }

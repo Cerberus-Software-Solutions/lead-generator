@@ -16,7 +16,6 @@ function Result(props) {
       >
         <div>
           Thank you for inquiring. Your answers have been sent to my email and I will be contacting you as soon as I can.
-          <strong>{props.quizResult}</strong>
         </div>
       </CSSTransitionGroup>
     </section>

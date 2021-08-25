@@ -62,13 +62,13 @@ class App extends Component {
     });
   }
 
-
-  handleAnswerSelected(event) {
-    const value = event.currentTarget.value;
-    this.setUserAnswer(value);
-
-    if (value !== DONE_QUIZ) {
-      setTimeout(() => this.setNextQuestion(value), 300);
+  handleAnswerSelected(question, answer, answerType) {
+    this.state.userAnswers.push({
+      question: question,
+      answer: answer
+    });
+    if (answerType !== DONE_QUIZ) {
+      setTimeout(() => this.setNextQuestion(answerType), 300);
     } else {
       setTimeout(() => this.setResults(this.getResults()), 300);
     }
@@ -79,6 +79,7 @@ class App extends Component {
     var currentQuestion = this.state.currentQuestion;
     var currentPath = this.state.currentPath;
     var prevPath = this.state.prevPath;
+    this.state.userAnswers.pop();
 
     if(currentPath !== prevPath) {
       counter = quizQuestions[0][prevPath].length;
@@ -97,8 +98,10 @@ class App extends Component {
       currentPath: currentPath,
       prevPath: prevPath,
       hasInput: quizQuestions[0][currentPath][counter - 1].hasInput === undefined ? false : quizQuestions[0][currentPath][counter - 1].hasInput,
-      inputContent:quizQuestions[0][currentPath][counter - 1].inputContent === undefined ? '' : quizQuestions[0][currentPath][counter - 1].inputContent,
+      inputContent: quizQuestions[0][currentPath][counter - 1].inputContent === undefined ? '' : quizQuestions[0][currentPath][counter - 1].inputContent,
+      userAnswers: this.state.userAnswers
     });
+    console.log(this.state.userAnswers)
   }
 
   setUserAnswer(answer) {
@@ -134,6 +137,7 @@ class App extends Component {
       hasInput: quizQuestions[0][nextPath][counter].hasInput === undefined ? false : quizQuestions[0][nextPath][counter].hasInput,
       inputContent: quizQuestions[0][nextPath][counter].inputContent === undefined ? '' : quizQuestions[0][nextPath][counter].inputContent,
     });
+    console.log(this.state.userAnswers) 
   }
 
   getResults() {
@@ -146,9 +150,7 @@ class App extends Component {
   }
 
   setResults(result) {
-    if (result.length === 1) {
-      this.setState({ result: result[0] });
-    }
+    this.setState({ result: DONE_QUIZ });
   }
 
   renderQuiz() {
