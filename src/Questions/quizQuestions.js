@@ -447,21 +447,20 @@ var quizQuestions = [
                 ]
             },
             {
-                question: "Placeholder for last question",
-                prev: "pathOneHybrid",
+                question: "Please provide your contact information",
+                prev: "pathOneGasPath",
                 answers: [
                     {
                         type: "Done",
-                        content: "Basic"
-                    },
-        
-                    {
-                        type: "Done",
-                        content: "Middle"
+                        content: "Name"
                     },
                     {
                         type: "Done",
-                        content: "Loaded"
+                        content: "Phone number"
+                    },
+                    {
+                        type: "Done",
+                        content: "Email"
                     }
                 ]
             }
@@ -654,21 +653,20 @@ var quizQuestions = [
                 ]
             },
             {
-                question: "Placeholder for last question",
+                question: "Please provide your contact information",
                 prev: "pathTwo",
                 answers: [
                     {
                         type: "Done",
-                        content: "Basic"
-                    },
-        
-                    {
-                        type: "Done",
-                        content: "Middle"
+                        content: "Name"
                     },
                     {
                         type: "Done",
-                        content: "Loaded"
+                        content: "Phone number"
+                    },
+                    {
+                        type: "Done",
+                        content: "Email"
                     }
                 ]
             }
@@ -764,16 +762,30 @@ var quizQuestions = [
                 answers: [
                     {
                         type: "pathThreeCar",
-                        content: "Basic"
+                        content: "Basic",
+                        packageOptions: [
+                            "-try to type! big chungus",
+                            "Big Chungus1",
+                            "a",
+                            "b"
+                        ]
                     },
         
                     {
                         type: "pathThreeCar",
-                        content: "Middle"
+                        content: "Middle",
+                        packageOptions: [
+                            "-try to type!",
+                            "Big Chungus2"
+                        ]
                     },
                     {
                         type: "pathThreeCar",
-                        content: "Loaded"
+                        content: "Loaded",
+                        packageOptions: [
+                            "-try to type!",
+                            "Big Chungus3"
+                        ]
                     }
                 ]
             },
@@ -803,21 +815,20 @@ var quizQuestions = [
                 ]
             },
             {
-                question: "Placeholder for last question",
+                question: "Please provide your contact information",
                 prev: "pathThreeCar",
                 answers: [
                     {
                         type: "Done",
-                        content: "Basic"
-                    },
-        
-                    {
-                        type: "Done",
-                        content: "Middle"
+                        content: "Name"
                     },
                     {
                         type: "Done",
-                        content: "Loaded"
+                        content: "Phone number"
+                    },
+                    {
+                        type: "Done",
+                        content: "Email"
                     }
                 ]
             }
@@ -908,16 +919,30 @@ var quizQuestions = [
                 answers: [
                     {
                         type: "pathThreeSUV",
-                        content: "Basic"
+                        content: "Basic",
+                        packageOptions: [
+                            "-try to type! big chungus",
+                            "Big Chungus1",
+                            "a",
+                            "b"
+                        ]
                     },
         
                     {
                         type: "pathThreeSUV",
-                        content: "Middle"
+                        content: "Middle",
+                        packageOptions: [
+                            "-try to type!",
+                            "Big Chungus2"
+                        ]
                     },
                     {
                         type: "pathThreeSUV",
-                        content: "Loaded"
+                        content: "Loaded",
+                        packageOptions: [
+                            "-try to type!",
+                            "Big Chungus3"
+                        ]
                     }
                 ]
             },
@@ -947,21 +972,20 @@ var quizQuestions = [
                 ]
             },
             {
-                question: "Placeholder for last question",
+                question: "Please provide your contact information",
                 prev: "pathThreeSUV",
                 answers: [
                     {
                         type: "Done",
-                        content: "Basic"
-                    },
-        
-                    {
-                        type: "Done",
-                        content: "Middle"
+                        content: "Name"
                     },
                     {
                         type: "Done",
-                        content: "Loaded"
+                        content: "Phone number"
+                    },
+                    {
+                        type: "Done",
+                        content: "Email"
                     }
                 ]
             }

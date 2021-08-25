@@ -28,6 +28,7 @@ class App extends Component {
       result: '',
       hasInput: false,
       inputContent: '',
+      userAnswers: []
     };
 
     ReactGA.initialize("UA-110570651-1");

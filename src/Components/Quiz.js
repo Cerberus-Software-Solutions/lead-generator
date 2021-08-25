@@ -93,14 +93,18 @@ function Quiz(props) {
     );
   }
 
+  function handleSubmit(e){
+    e.preventDefault();
+  }
+
   function addTextfield(){
     var format;
     if(props.hasInput){
       format =
       <div style={{display: 'flex', alignItems:'center', flexDirection:'column'}}>
           <h1  className={classes.h1} style={{textTransform: 'none', fontSize: 23}}>{props.inputContent}</h1>
-          <form className={classes.inputBox} noValidate autoComplete="off">
-            <TextField id="outlined-basic" label={<Typography style={{fontSize: 15, color: "black"}}>Enter your response here</Typography>} variant="outlined" inputProps={{min: 0, style: { textAlign: 'center' }}} />
+          <form className={classes.inputBox} noValidate autoComplete="off" onSubmit={handleSubmit}>
+            <TextField id="outlined-basic"  style={{textAlign: 'left'}} label={<Typography style={{fontSize: 20, color: "black"}}>Enter your response here (then press next arrow)</Typography>} variant="outlined" inputProps={{min: 0, style: { textAlign: 'left', paddingTop: 30, fontSize: 20}}} />
           </form>
       </div>  
     }
@@ -127,12 +131,11 @@ function Quiz(props) {
   }
 
   function nextButton() {
-    let boolean = props.question === "What features and packages are you looking for? (select all that applies)";
     var button;
-    if(boolean) {
+    if(props.hasInput) {
       button = 
       <Grid>
-        <Button style={{textTransform: 'none'}} value={props.answerOptions[props.currentQuestion].type} onClick={props.onAnswerSelected}>
+        <Button style={{textTransform: 'none'}} value={props.answerOptions[0].type} onClick={props.onAnswerSelected}>
             <Paper className={classes.previous} style={{fontSize: 28, color: 'white'}}>&#160;&#160;&#160;&#8250;&#160;&#160;&#160;</Paper>
         </Button>
       </Grid>
