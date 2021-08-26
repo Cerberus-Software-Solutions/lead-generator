@@ -18,6 +18,8 @@ var nameTextFieldValue = "";
 var phoneTextFieldValue = "";
 var emailTextFieldValue = "";
 
+let state = [];
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -86,6 +88,7 @@ function Quiz(props) {
         onChangeName={onChangeName}
         onChangePhone={onChangePhone}
         onChangeEmail={onChangeEmail}
+        handleCheckboxes={handleChange}
         classes={classes}
       />
     );
@@ -102,6 +105,24 @@ function Quiz(props) {
   function onChangeEmail(newEmail) {
     emailTextFieldValue = newEmail;
   }
+
+  function arrayRemove(arr, value) { 
+
+    return arr.filter(function(ele){ 
+        return ele !== value; 
+    });
+  }
+
+  let handleChange = (event) => {
+    if (event.target.checked){
+      state.push(event.target.value);
+    }
+    else{
+      state = arrayRemove(state, event.target.value)
+    }
+    console.log(state)
+    console.log(state.length);
+  };
 
    function createMCQuiz(){
     return (
@@ -164,6 +185,7 @@ function Quiz(props) {
               props.onAnswerSelected(props.question, generalTextFieldValue, props.answerOptions[0].type);
               generalTextFieldValue = "";
             }
+            else if()
           }}>
             <Paper className={classes.previous} style={{fontSize: 28, color: 'white'}}>&#160;&#160;&#160;&#8250;&#160;&#160;&#160;</Paper>
         </Button>
