@@ -575,7 +575,7 @@ var quizQuestions = [
                 answers: [
                     {
                         type: "pathTwo",
-                        content: "Basic                                                         "
+                        content: "Basic"
                     },
                     {
                         type: "pathTwo",

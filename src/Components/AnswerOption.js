@@ -8,6 +8,8 @@ import Checkbox from '@material-ui/core/Checkbox';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 
+let state = [];
+
 const styles = {
   size: {
     width: 40,
@@ -40,20 +42,27 @@ function packgageItems(item){
   );
 }
 
+function arrayRemove(arr, value) { 
+  return arr.filter(function(ele){ 
+    
+      return ele !== value; 
+  });
+}
 
 
 function AnswerOption(props) {
-  const [state, setState] = React.useState({
-    Basic: false,
-    Middle: false,
-    Loaded: false,
-  });
 
-  const handleChange = (event) => {
-    setState({ ...state, [event.target.name]: event.target.checked });
+
+  let handleChange = (event) => {
+    if (event.target.checked){
+      state[event.target.value] = event.target.value;
+    }
+    else{
+      state = arrayRemove(state, event.target.value);
+    }
     console.log(state);
   };
-
+  
   // eslint-disable-next-line default-case
   switch(quizType(props)) {
     case 'package': 
@@ -73,7 +82,7 @@ function AnswerOption(props) {
       return (
         <Grid item xs={4} style={{paddingLeft:"30px"}}>
           <FormControlLabel
-            control={ <Checkbox className={styles.size} onChange={handleChange} name={props.answerContent}/> }
+            control={ <Checkbox className={styles.size} onChange={handleChange} value={props.answerContent} name={props.answerContent}/> }
             label={<Typography style={{fontSize: 20, color: "black"}}>{props.answerContent}</Typography>}
           />
         </Grid>
