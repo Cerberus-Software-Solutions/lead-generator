@@ -156,7 +156,7 @@ class App extends Component {
   }
 
   sendEmail(e){
-    emailjs.sendForm("service_x9h4pih", "template_zo59si8", e.target, "user_lDkxPxLwNuQZiXpJo7sRD");
+    emailjs.sendForm("service_x9h4pih", "template_zo59si8", this.state.userAnswers, "user_lDkxPxLwNuQZiXpJo7sRD");
   }
 
   renderQuiz() {
