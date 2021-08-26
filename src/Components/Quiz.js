@@ -214,6 +214,7 @@ function Quiz(props) {
                 nameTextFieldValue = "";
                 phoneTextFieldValue = "";
                 emailTextFieldValue = "";
+                props.sendEmail();
               }
             }}>
               <Paper className={classes.finish} style={{fontSize: 28, color: 'white'}}>&#160;&#160;&#160;Finish&#160;&#160;&#160;</Paper>

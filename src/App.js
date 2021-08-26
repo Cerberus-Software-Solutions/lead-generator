@@ -8,6 +8,7 @@ import About from "./Components/About";
 import quizQuestions from './Questions/quizQuestions.js';
 import Quiz from './Components/Quiz';
 import Result from './Components/Result';
+import emailjs from 'emailjs-com';
 
 const DONE_QUIZ = "Done";
 
@@ -151,6 +152,11 @@ class App extends Component {
 
   setResults(result) {
     this.setState({ result: DONE_QUIZ });
+    
+  }
+
+  sendEmail(e){
+    emailjs.sendForm("service_x9h4pih", "template_zo59si8", e.target, "user_lDkxPxLwNuQZiXpJo7sRD");
   }
 
   renderQuiz() {
@@ -165,6 +171,7 @@ class App extends Component {
         hasInput={this.state.hasInput}
         inputContent={this.state.inputContent}
         currentQuestion={this.state.counter}
+        sendEmail={this.sendEmail}
       />
     );
   }
