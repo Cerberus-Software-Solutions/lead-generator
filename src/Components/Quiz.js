@@ -185,7 +185,10 @@ function Quiz(props) {
               props.onAnswerSelected(props.question, generalTextFieldValue, props.answerOptions[0].type);
               generalTextFieldValue = "";
             }
-            else if()
+            else if(state.length !== 0){
+              props.onAnswerSelected(props.question, state, props.answerOptions[0].type);
+              state = [];
+            }
           }}>
             <Paper className={classes.previous} style={{fontSize: 28, color: 'white'}}>&#160;&#160;&#160;&#8250;&#160;&#160;&#160;</Paper>
         </Button>
