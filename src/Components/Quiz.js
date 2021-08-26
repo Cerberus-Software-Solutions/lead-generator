@@ -186,7 +186,11 @@ function Quiz(props) {
               generalTextFieldValue = "";
             }
             else if(state.length !== 0){
-              props.onAnswerSelected(props.question, state, props.answerOptions[0].type);
+              var fromatCheckboxes = "";
+              for (let i = 0; i < state.length; i++){
+                fromatCheckboxes += state[i] + '\n';
+              }
+              props.onAnswerSelected(props.question, fromatCheckboxes, props.answerOptions[0].type);
               state = [];
             }
           }}>
@@ -214,7 +218,6 @@ function Quiz(props) {
                 nameTextFieldValue = "";
                 phoneTextFieldValue = "";
                 emailTextFieldValue = "";
-                props.sendEmail();
               }
             }}>
               <Paper className={classes.finish} style={{fontSize: 28, color: 'white'}}>&#160;&#160;&#160;Finish&#160;&#160;&#160;</Paper>

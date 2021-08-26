@@ -138,7 +138,6 @@ class App extends Component {
       hasInput: quizQuestions[0][nextPath][counter].hasInput === undefined ? false : quizQuestions[0][nextPath][counter].hasInput,
       inputContent: quizQuestions[0][nextPath][counter].inputContent === undefined ? '' : quizQuestions[0][nextPath][counter].inputContent,
     });
-    console.log(this.state.userAnswers) 
   }
 
   getResults() {
@@ -150,14 +149,31 @@ class App extends Component {
     return answersCountKeys.filter(key => answersCount[key] === maxAnswerCount);
   }
 
+  formatEmail(){
+    var message = '';
+    for(let i = 0; i < this.state.userAnswers.length-1; i++){
+      message += this.state.userAnswers[i].question + ' \n\n' + this.state.userAnswers[i].answer + " || " + ' \n\n';
+    }
+
+    message += this.state.userAnswers[this.state.userAnswers.length-1].question + ' \n\n' 
+     + this.state.userAnswers[this.state.userAnswers.length-1].answer.name
+     + ' \n\n' + this.state.userAnswers[this.state.userAnswers.length-1].answer.phone + ' \n\n' 
+     + this.state.userAnswers[this.state.userAnswers.length-1].answer.email; 
+    return message;
+  }
+
   setResults(result) {
+    emailjs.send("service_x9h4pih", "template_zo59si8", {
+      name: this.state.userAnswers[this.state.userAnswers.length-1].answer.name,
+      message: this.formatEmail(),
+    }
+    , "user_lDkxPxLwNuQZiXpJo7sRD");
+    console.log(this.formatEmail());
     this.setState({ result: DONE_QUIZ });
     
   }
 
-  sendEmail(e){
-    emailjs.sendForm("service_x9h4pih", "template_zo59si8", this.state.userAnswers, "user_lDkxPxLwNuQZiXpJo7sRD");
-  }
+
 
   renderQuiz() {
     return (
@@ -171,7 +187,6 @@ class App extends Component {
         hasInput={this.state.hasInput}
         inputContent={this.state.inputContent}
         currentQuestion={this.state.counter}
-        sendEmail={this.sendEmail}
       />
     );
   }
