@@ -43,8 +43,9 @@ function packgageItems(item){
 }
 
 function arrayRemove(arr, value) { 
-  return arr.filter(function(ele){ 
-    
+  
+   arr.filter(function(ele){ 
+    console.log(ele)
       return ele !== value; 
   });
 }
@@ -58,9 +59,9 @@ function AnswerOption(props) {
       state[event.target.value] = event.target.value;
     }
     else{
-      state = arrayRemove(state, event.target.value);
+      console.log(state.filter(ele => ele[event.target.value] !== event.target.value))
     }
-    console.log(state);
+    console.log(state)
   };
   
   // eslint-disable-next-line default-case
