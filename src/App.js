@@ -173,8 +173,6 @@ class App extends Component {
     
   }
 
-
-
   renderQuiz() {
     return (
       <Quiz
