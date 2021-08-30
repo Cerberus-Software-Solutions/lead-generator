@@ -42,13 +42,11 @@ function packgageItems(item){
   );
 }
 
-
-
+function handleSubmit(e){
+  e.preventDefault();
+}
 
 function AnswerOption(props) {
-
-
-  
   // eslint-disable-next-line default-case
   switch(quizType(props)) {
     case 'package': 
@@ -57,9 +55,10 @@ function AnswerOption(props) {
           <Button className={props.classes.image} style={{textTransform: 'none'}} onClick={() => {
             props.onAnswerSelected(props.question, props.answerContent, props.answerType)
           }}>
-            <Paper className={props.classes.paper} style={{fontSize: 18}}>{props.answerContent}</Paper>
-            <Paper className={props.classes.paper} style={{fontSize: 18}}>
-              {props.answerPackageOptions.map(packgageItems)}     
+            <Paper className={props.classes.paper} style={{fontSize: 28, color: 'black'}}>{props.answerContent}</Paper>
+            <Paper className={props.classes.paper} style={{fontSize: 18, textAlign: 'left'}}>
+              {props.answerPackageOptions.map(packgageItems)}
+
             </Paper>
           </Button>
         </Grid>
@@ -77,20 +76,20 @@ function AnswerOption(props) {
       return (
         <Grid item xs={12}>
           <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', flexDirection:'column'}}>
-              <form className={props.classes.inputBox} noValidate autoComplete="off">
+              <form id="input-box" noValidate autoComplete="off" onSubmit={handleSubmit}>
                 <TextField onChange={(event) => {
                   props.onChangeName(event.target.value)
-                }} id="outlined-basic" style={{textAlign: 'left'}} label={<Typography style={{fontSize: 20, color: "black"}}>Your name</Typography>} variant="outlined" inputProps={{min: 0, style: { textAlign: 'left', paddingTop: 30, fontSize: 20}}} />
+                }} id="outlined-basic" style={{textAlign: 'left'}} label={<Typography id="typography">Your name</Typography>} variant="outlined" inputProps={{min: 0, style: { textAlign: 'left', paddingTop: 30, fontSize: 20}}} />
               </form>
-              <form className={props.classes.inputBox} noValidate autoComplete="off">
+              <form id="input-box" noValidate autoComplete="off" onSubmit={handleSubmit}>
               <TextField onChange={(event) => {
                   props.onChangePhone(event.target.value)
-                }} id="outlined-basic" style={{textAlign: 'left'}} label={<Typography style={{fontSize: 20, color: "black"}}>Your phone number</Typography>} variant="outlined" inputProps={{min: 0, style: { textAlign: 'left', paddingTop: 30, fontSize: 20}}} />
+                }} id="outlined-basic" style={{textAlign: 'left'}} label={<Typography id="typography">Your phone number</Typography>} variant="outlined" inputProps={{min: 0, style: { textAlign: 'left', paddingTop: 30, fontSize: 20}}} />
               </form>
-              <form className={props.classes.inputBox} noValidate autoComplete="off">
+              <form id="input-box" noValidate autoComplete="off" onSubmit={handleSubmit}>
               <TextField onChange={(event) => {
                   props.onChangeEmail(event.target.value)
-                }} id="outlined-basic" style={{textAlign: 'left'}} label={<Typography style={{fontSize: 20, color: "black"}}>Your email</Typography>} variant="outlined" inputProps={{min: 0, style: { textAlign: 'left', paddingTop: 30, fontSize: 20}}} />
+                }} id="outlined-basic" style={{textAlign: 'left'}} label={<Typography id="typography">Your email</Typography>} variant="outlined" inputProps={{min: 0, style: { textAlign: 'left', paddingTop: 30, fontSize: 20}}} />
               </form>
           </div>
         </Grid>

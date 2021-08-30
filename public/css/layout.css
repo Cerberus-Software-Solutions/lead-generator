@@ -135,7 +135,7 @@ header .scrolldown a:hover { color: #0762f9; }
    left: 0;
    top: 0;
 }
-.opaque { background-color: #333; }
+.opaque { background-color: #00CCCC; }
 
 /* hide toggle button */
 #nav-wrap > a.mobile-btn { display: none; }
@@ -174,7 +174,7 @@ ul#nav li a {
 }
 
 ul#nav li a:active { background-color: transparent !important; }
-ul#nav li.current a { color: #fe6928; }
+ul#nav li.current a { color: #000524; }
 
 
 /* ------------------------------------------------------------------ */
@@ -202,8 +202,8 @@ ul#nav li.current a { color: #fe6928; }
 }
 #about .profile-pic {
    position: relative;
-   width: 120px;
-   height: 120px;
+   width: 200px;
+   height: 200px;
    border-radius: 100%;
 }
 #about .contact-details { width: 41.66667%; }
@@ -292,7 +292,7 @@ ul#nav li.current a { color: #fe6928; }
 .bars li {
    position: relative;
   	margin-bottom: 60px;
-  	background: #333;
+  	background: #00CCCC;
   	height: 42px;
   	border-radius: 0px;
 }
@@ -1016,8 +1016,20 @@ footer .social-links li:first-child { margin-left: 0; }
    margin-right: 15px;
 }
 .project-btn{
-   background-color: #1abc9c !important;
+   background-color: #000524 !important;
 }
 .github-btn{
    background-color: #34495e !important;
+}
+
+#input-box{
+   margin-top: 10px;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+#typography{
+   font-size: 20px;
+   color: black;
 }

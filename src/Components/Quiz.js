@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
   inputBox: {
       '& > *': {
         marginTop: theme.spacing(1),
-        width: '75ch',
+        width: 'auto',
       },
   },
 }));
@@ -120,13 +120,12 @@ function Quiz(props) {
     else{
       state = arrayRemove(state, event.target.value)
     }
-    console.log(state)
-    console.log(state.length);
   };
 
    function createMCQuiz(){
+    var widthBool = props.question === "What features/packages are you looking for?" ? '1000px' : '100%';
     return (
-      <div className={classes.root}>
+      <div className={classes.root} style={{width: widthBool}}>
           <Grid container direction="row" justifyContent="center">
             {props.answerOptions.map(renderAnswerOptions)}
           </Grid>
@@ -144,12 +143,12 @@ function Quiz(props) {
     var format;
     if(props.hasInput){
       format =
-      <div style={{display: 'flex', alignItems:'center', flexDirection:'column'}}>
+      <div style={{display: 'flex', alignItems:'center', flexDirection:'column', width: 'auto'}}>
           <h1  className={classes.h1} style={{textTransform: 'none', fontSize: 23}}>{props.inputContent}</h1>
-          <form className={classes.inputBox} noValidate autoComplete="off" onSubmit={handleSubmit}>
+          <form id="input-box" className="input-box" noValidate autoComplete="off" onSubmit={handleSubmit}>
             <TextField onChange={(event) => {
               generalTextFieldValue = event.target.value;
-            }} id="outlined-basic" style={{textAlign: 'left'}} label={<Typography style={{fontSize: 20, color: "black"}}>Enter your response here (then press next arrow)</Typography>} variant="outlined" inputProps={{min: 0, style: { textAlign: 'left', paddingTop: 30, fontSize: 20}}} />
+            }} id="outlined-basic" style={{textAlign: 'left'}} label={<Typography id="typography">Enter your response here (then press next arrow)</Typography>} variant="outlined" inputProps={{min: 0, style: { textAlign: 'left', paddingTop: 30, fontSize: 20}}} />
           </form>
       </div>  
     }

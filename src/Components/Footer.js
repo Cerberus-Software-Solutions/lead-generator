@@ -23,7 +23,7 @@ class Footer extends Component {
               <ul className="social-links">{networks}</ul>
 
               <ul className="copyright">
-                <a>&copy; Copyright 2021 DaveAutos</a>
+                <a>&copy; Copyright 2021 David Halliday</a>
                 <li>
                   <a title="Samson & Kashton Inc.">
                   Created by Samson & Kashton Inc.

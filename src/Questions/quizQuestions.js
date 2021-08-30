@@ -3,7 +3,7 @@ var quizQuestions = [
     {
         firstQuestion: [
             {
-                question: "What type of car are you looking for?",
+                question: "What type of vehicle are you looking for?",
                 answers: [
                     {
                         type: "pathOne",
@@ -65,7 +65,7 @@ var quizQuestions = [
                 question: "Monthly Budget?",
                 prev: "pathOne",
                 hasInput: true,
-                inputContent: "Prefer to pay in cash? Enter the full amount below",
+                inputContent: "Prefer to pay in cash?",
                 answers: [
                     {
                         type: "pathOneGasPath",
@@ -157,19 +157,19 @@ var quizQuestions = [
                 answers: [
                     {
                         type: "pathOneGasPath",
-                        content: "0-20 000"
+                        content: "0-20,000"
                     },
                     {
                         type: "pathOneGasPath",
-                        content: "30 000-60 000"
+                        content: "30,000-60,000"
                     },
                     {
                         type: "pathOneGasPath",
-                        content: "70 000-100 000"
+                        content: "70,000-100,000"
                     },
                     {
                         type: "pathOneGasPath",
-                        content: "More than 100 000"
+                        content: "More than 100,000"
                     }
                 ]
             },
@@ -183,10 +183,16 @@ var quizQuestions = [
                         type: "pathOneGasPath",
                         content: "Basic",
                         packageOptions: [
-                            "-try to type! big chungus",
-                            "Big Chungus1",
-                            "a",
-                            "b"
+                            "- Steel rims on hubcaps or plain alloy wheels",
+                            "- Cloth seats",
+                            "- Potential heated seats",
+                            "- Basic safety features",
+                            "- Basic driving assist features",
+                            "- Back up camera",
+                            "- Standard turn key",
+                            "- Entry level infotainment system",
+                            "- Manual seating adjustment",
+                            "- Entry level engine and performance ability",
                         ]
                     },
         
@@ -194,16 +200,31 @@ var quizQuestions = [
                         type: "pathOneGasPath",
                         content: "Middle",
                         packageOptions: [
-                            "-try to type!",
-                            "Big Chungus2"
+                            "- Alloy wheels",
+                            "- Cloth/leather seats",
+                            "- Heated seats and steering wheel",
+                            "- Blindspot, parking sensors, collision warnings",
+                            "- Updated infotainment system (Apple Carplay/Android Auto)",
+                            "- Backup camera",
+                            "- Potential sunroof",
+                            "- Potential driver-side power seat",
+                            "- Entry level engine and performance ability",
                         ]
                     },
                     {
                         type: "pathOneGasPath",
                         content: "Loaded",
                         packageOptions: [
-                            "-try to type!",
-                            "Big Chungus3"
+                            "- Leather seating",
+                            "- Heated and cooled seats",
+                            "- Advanced safety features",
+                            "- Advanced driving assists",
+                            "- Power liftgate and automatic trunk",
+                            "- Built in navigation",
+                            "- Upgraded sound system",
+                            "- Sunroof",
+                            "- Power seats",
+                            "- Turbo charged performance engine",
                         ]
                     }
                 ]
@@ -288,7 +309,7 @@ var quizQuestions = [
                 question: "Monthly Budget?",
                 prev: "pathOneHybrid",
                 hasInput: true,
-                inputContent: "Prefer to pay in cash? Enter the full amount below",
+                inputContent: "Prefer to pay in cash?",
                 answers: [
                     {
                         type: "pathOneHybrid",
@@ -362,19 +383,19 @@ var quizQuestions = [
                 answers: [
                     {
                         type: "pathOneHybrid",
-                        content: "0-20 000"
+                        content: "0-20,000"
                     },
                     {
                         type: "pathOneHybrid",
-                        content: "30 000-60 000"
+                        content: "30,000-60,000"
                     },
                     {
                         type: "pathOneHybrid",
-                        content: "70 000-100 000"
+                        content: "70,000-100,000"
                     },
                     {
                         type: "pathOneHybrid",
-                        content: "More than 100 000"
+                        content: "More than 100,000"
                     }
                 ]
             },
@@ -388,10 +409,16 @@ var quizQuestions = [
                         type: "pathOneHybrid",
                         content: "Basic",
                         packageOptions: [
-                            "-try to type! big chungus",
-                            "Big Chungus1",
-                            "a",
-                            "b"
+                            "- Steel rims on hubcaps or plain alloy wheels",
+                            "- Cloth seats",
+                            "- Potential heated seats",
+                            "- Basic safety features",
+                            "- Basic driving assist features",
+                            "- Back up camera",
+                            "- Standard turn key",
+                            "- Entry level infotainment system",
+                            "- Manual seating adjustment",
+                            "- Entry level engine and performance ability",
                         ]
                     },
         
@@ -399,16 +426,31 @@ var quizQuestions = [
                         type: "pathOneHybrid",
                         content: "Middle",
                         packageOptions: [
-                            "-try to type!",
-                            "Big Chungus2"
+                            "- Alloy wheels",
+                            "- Cloth/leather seats",
+                            "- Heated seats and steering wheel",
+                            "- Blindspot, parking sensors, collision warnings",
+                            "- Updated infotainment system (Apple Carplay/Android Auto)",
+                            "- Backup camera",
+                            "- Potential sunroof",
+                            "- Potential driver-side power seat",
+                            "- Entry level engine and performance ability",
                         ]
                     },
                     {
                         type: "pathOneHybrid",
                         content: "Loaded",
                         packageOptions: [
-                            "-try to type!",
-                            "Big Chungus3"
+                            "- Leather seating",
+                            "- Heated and cooled seats",
+                            "- Advanced safety features",
+                            "- Advanced driving assists",
+                            "- Power liftgate and automatic trunk",
+                            "- Built in navigation",
+                            "- Upgraded sound system",
+                            "- Sunroof",
+                            "- Power seats",
+                            "- Turbo charged performance engine",
                         ]
                     }
                 ]
@@ -469,7 +511,7 @@ var quizQuestions = [
                 question: "Monthly Budget?",
                 prev: "pathTwo",
                 hasInput: true,
-                inputContent: "Prefer to pay in cash? Enter the full amount below",
+                inputContent: "Prefer to pay in cash?",
                 answers: [
                     {
                         type: "pathTwo",
@@ -551,19 +593,19 @@ var quizQuestions = [
                 answers: [
                     {
                         type: "pathTwo",
-                        content: "0-20 000"
+                        content: "0-20,000"
                     },
                     {
                         type: "pathTwo",
-                        content: "30 000-60 000"
+                        content: "30,000-60,000"
                     },
                     {
                         type: "pathTwo",
-                        content: "70 000-100 000"
+                        content: "70,000-100,000"
                     },
                     {
                         type: "pathTwo",
-                        content: "More than 100 000"
+                        content: "More than 100,000"
                     }
                 ]
             },
@@ -684,7 +726,7 @@ var quizQuestions = [
                 question: "Monthly Budget?",
                 prev: "pathThreeCar",
                 hasInput: true,
-                inputContent: "Prefer to pay in cash? Enter the full amount below",
+                inputContent: "Prefer to pay in cash?",
                 answers: [
                     {
                         type: "pathThreeCar",
@@ -740,10 +782,16 @@ var quizQuestions = [
                         type: "pathThreeCar",
                         content: "Basic",
                         packageOptions: [
-                            "-try to type! big chungus",
-                            "Big Chungus1",
-                            "a",
-                            "b"
+                            "- Steel rims on hubcaps or plain alloy wheels",
+                            "- Cloth seats",
+                            "- Potential heated seats",
+                            "- Basic safety features",
+                            "- Basic driving assist features",
+                            "- Back up camera",
+                            "- Standard turn key",
+                            "- Entry level infotainment system",
+                            "- Manual seating adjustment",
+                            "- Entry level engine and performance ability",
                         ]
                     },
         
@@ -751,16 +799,31 @@ var quizQuestions = [
                         type: "pathThreeCar",
                         content: "Middle",
                         packageOptions: [
-                            "-try to type!",
-                            "Big Chungus2"
+                            "- Alloy wheels",
+                            "- Cloth/leather seats",
+                            "- Heated seats and steering wheel",
+                            "- Blindspot, parking sensors, collision warnings",
+                            "- Updated infotainment system (Apple Carplay/Android Auto)",
+                            "- Backup camera",
+                            "- Potential sunroof",
+                            "- Potential driver-side power seat",
+                            "- Entry level engine and performance ability",
                         ]
                     },
                     {
                         type: "pathThreeCar",
                         content: "Loaded",
                         packageOptions: [
-                            "-try to type!",
-                            "Big Chungus3"
+                            "- Leather seating",
+                            "- Heated and cooled seats",
+                            "- Advanced safety features",
+                            "- Advanced driving assists",
+                            "- Power liftgate and automatic trunk",
+                            "- Built in navigation",
+                            "- Upgraded sound system",
+                            "- Sunroof",
+                            "- Power seats",
+                            "- Turbo charged performance engine",
                         ]
                     }
                 ]
@@ -833,7 +896,7 @@ var quizQuestions = [
                 question: "Monthly Budget?",
                 prev: "pathThreeSUV",
                 hasInput: true,
-                inputContent: "Prefer to pay in cash? Enter the full amount below",
+                inputContent: "Prefer to pay in cash?",
                 answers: [
                     {
                         type: "pathThreeSUV",
@@ -889,10 +952,16 @@ var quizQuestions = [
                         type: "pathThreeSUV",
                         content: "Basic",
                         packageOptions: [
-                            "-try to type! big chungus",
-                            "Big Chungus1",
-                            "a",
-                            "b"
+                            "- Steel rims on hubcaps or plain alloy wheels",
+                            "- Cloth seats",
+                            "- Potential heated seats",
+                            "- Basic safety features",
+                            "- Basic driving assist features",
+                            "- Back up camera",
+                            "- Standard turn key",
+                            "- Entry level infotainment system",
+                            "- Manual seating adjustment",
+                            "- Entry level engine and performance ability",
                         ]
                     },
         
@@ -900,16 +969,31 @@ var quizQuestions = [
                         type: "pathThreeSUV",
                         content: "Middle",
                         packageOptions: [
-                            "-try to type!",
-                            "Big Chungus2"
+                            "- Alloy wheels",
+                            "- Cloth/leather seats",
+                            "- Heated seats and steering wheel",
+                            "- Blindspot, parking sensors, collision warnings",
+                            "- Updated infotainment system (Apple Carplay/Android Auto)",
+                            "- Backup camera",
+                            "- Potential sunroof",
+                            "- Potential driver-side power seat",
+                            "- Entry level engine and performance ability",
                         ]
                     },
                     {
                         type: "pathThreeSUV",
                         content: "Loaded",
                         packageOptions: [
-                            "-try to type!",
-                            "Big Chungus3"
+                            "- Leather seating",
+                            "- Heated and cooled seats",
+                            "- Advanced safety features",
+                            "- Advanced driving assists",
+                            "- Power liftgate and automatic trunk",
+                            "- Built in navigation",
+                            "- Upgraded sound system",
+                            "- Sunroof",
+                            "- Power seats",
+                            "- Turbo charged performance engine",
                         ]
                     }
                 ]

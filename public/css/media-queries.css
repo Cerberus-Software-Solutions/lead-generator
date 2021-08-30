@@ -19,6 +19,13 @@
       margin: 0 auto 12px auto;
    }
 
+   
+   #input-box{
+      margin-top: 15px;
+      width: 100%;
+   }
+
+
 }
 
 /* screenwidth less than 900px
@@ -92,13 +99,23 @@
 
 }
 
+
 /* mobile wide/smaller tablets
 ---------------------------------------------------------------------- */
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 800px) {
 
    /* mobile navigation
    -------------------------------------------------------------------- */
+
+   #input-box{
+      margin-top: 10px;
+      width: 100%;
+      margin-left: 50px;
+      margin-right: 50px;
+
+   }
+
    #nav-wrap {
       font: 12px 'opensans-bold', sans-serif;
       background: transparent !important;
@@ -112,7 +129,7 @@
 	   width: 48px;
 		height: 48px;
 		text-align: left;
-		background-color: #CC5200;
+		background-color: #000524;
 		position: relative;
       border: none;
       float: right;
@@ -123,7 +140,7 @@
 
       position: relative;
       top: 0px;
-      right: 30px;
+      right: 0px;
    }
 
 	#nav-wrap > a:before,
@@ -160,7 +177,7 @@
 	#nav-wrap:target > ul#nav	{
 	   display: block;
       padding: 30px 20px 48px 20px;
-      background: #1f2024;
+      background: #00CCCC;
       margin: 0 30px;
       clear: both;
    }
@@ -369,6 +386,11 @@
    /* social links */
    footer .social-links { font-size: 20px; }
    footer .social-links li { margin-left: 14px; }   
+
+   #typography{
+      font-size: 16px;
+      color: black;
+   }
 
 }
 

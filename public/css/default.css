@@ -526,8 +526,14 @@ input::-moz-focus-inner {
 
 /*  7. Forms  --------------------------------------------------------- */
 
-form { margin-bottom: 24px; }
-fieldset { margin-bottom: 24px; }
+form { 
+   margin-bottom: 24px; 
+}
+fieldset { 
+   margin-bottom: 24px; 
+   margin-left: 50px;
+   margin-right: 50px;
+}
 
 input[type="text"],
 input[type="password"],
