@@ -123,9 +123,8 @@ function Quiz(props) {
   };
 
    function createMCQuiz(){
-    var widthBool = props.question === "What features/packages are you looking for?" ? '1000px' : '100%';
     return (
-      <div className={classes.root} style={{width: widthBool}}>
+      <div className={classes.root} id={props.question === "What features/packages are you looking for?" ? "div-grid" : ""}>
           <Grid container direction="row" justifyContent="center">
             {props.answerOptions.map(renderAnswerOptions)}
           </Grid>

@@ -177,7 +177,7 @@ var quizQuestions = [
                 question: "What features/packages are you looking for?",
                 prev: "pathOneGasPath",
                 hasInput: true,
-                inputContent: "Got a trim/model in mind? Describe it below",
+                inputContent: "Got a trim/model in mind?",
                 answers: [
                     {
                         type: "pathOneGasPath",
@@ -206,7 +206,6 @@ var quizQuestions = [
                             "- Blindspot, parking sensors, collision warnings",
                             "- Updated infotainment system (Apple Carplay/Android Auto)",
                             "- Backup camera",
-                            "- Potential sunroof",
                             "- Potential driver-side power seat",
                             "- Entry level engine and performance ability",
                         ]
@@ -403,7 +402,7 @@ var quizQuestions = [
                 question: "What features/packages are you looking for?",
                 prev: "pathOneHybrid",
                 hasInput: true,
-                inputContent: "Got a trim/model in mind? Describe it below",
+                inputContent: "Got a trim/model in mind?",
                 answers: [
                     {
                         type: "pathOneHybrid",
@@ -432,7 +431,6 @@ var quizQuestions = [
                             "- Blindspot, parking sensors, collision warnings",
                             "- Updated infotainment system (Apple Carplay/Android Auto)",
                             "- Backup camera",
-                            "- Potential sunroof",
                             "- Potential driver-side power seat",
                             "- Entry level engine and performance ability",
                         ]
@@ -613,7 +611,7 @@ var quizQuestions = [
                 question: "What features and packages are you looking for? (select all that applies)",
                 prev: "pathTwo",
                 hasInput: true,
-                inputContent: "Got a trim/model in mind? Describe it below",
+                inputContent: "Got a trim/model in mind?",
                 answers: [
                     {
                         type: "pathTwo",
@@ -776,7 +774,7 @@ var quizQuestions = [
                 question: "What features/packages are you looking for?",
                 prev: "pathThreeCar",
                 hasInput: true,
-                inputContent: "Got a trim/model in mind? Describe it below",
+                inputContent: "Got a trim/model in mind?",
                 answers: [
                     {
                         type: "pathThreeCar",
@@ -805,7 +803,6 @@ var quizQuestions = [
                             "- Blindspot, parking sensors, collision warnings",
                             "- Updated infotainment system (Apple Carplay/Android Auto)",
                             "- Backup camera",
-                            "- Potential sunroof",
                             "- Potential driver-side power seat",
                             "- Entry level engine and performance ability",
                         ]
@@ -946,7 +943,7 @@ var quizQuestions = [
                 question: "What features/packages are you looking for?",
                 prev: "pathThreeSUV",
                 hasInput: true,
-                inputContent: "Got a trim/model in mind? Describe it below",
+                inputContent: "Got a trim/model in mind?",
                 answers: [
                     {
                         type: "pathThreeSUV",
@@ -975,7 +972,6 @@ var quizQuestions = [
                             "- Blindspot, parking sensors, collision warnings",
                             "- Updated infotainment system (Apple Carplay/Android Auto)",
                             "- Backup camera",
-                            "- Potential sunroof",
                             "- Potential driver-side power seat",
                             "- Entry level engine and performance ability",
                         ]

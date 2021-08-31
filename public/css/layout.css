@@ -1033,3 +1033,19 @@ footer .social-links li:first-child { margin-left: 0; }
    font-size: 20px;
    color: black;
 }
+
+#paper{
+   width: 100%;
+   padding: 20px;
+   text-align: center;
+   color: black;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+#div-grid{
+   width: 1200px;
+   margin-left: 1000px;
+   float: right;
+}

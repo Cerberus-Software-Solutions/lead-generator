@@ -6,6 +6,11 @@
 
 /* ================================================================== */
 
+@media only screen and (max-width: 1200px) {
+   #div-grid{
+      width: 100%;
+   }
+}
 
 /* screenwidth less than 1024px
 --------------------------------------------------------------------- */
@@ -24,8 +29,6 @@
       margin-top: 15px;
       width: 100%;
    }
-
-
 }
 
 /* screenwidth less than 900px
@@ -110,7 +113,7 @@
 
    #input-box{
       margin-top: 10px;
-      width: 100%;
+      width: 90%;
       margin-left: 50px;
       margin-right: 50px;
 
@@ -354,6 +357,12 @@
 
 
 }
+@media only screen and (max-width: 510px) {
+   #typography{
+      font-size: 16px;
+      color: black;
+   }
+}
 
 /* mobile narrow
   -------------------------------------------------------------------------- */
@@ -394,11 +403,18 @@
 
 }
 
+@media only screen and (max-width: 410px) {
+   #typography{
+      font-size: 14px;
+      color: black;
+   }
+}
 
 
-
-
-
-
-
+@media only screen and (max-width: 365px) {
+   #typography{
+      font-size: 10px;
+      color: black;
+   }
+}
 
