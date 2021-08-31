@@ -1046,6 +1046,5 @@ footer .social-links li:first-child { margin-left: 0; }
 
 #div-grid{
    width: 1200px;
-   margin-left: 1000px;
-   float: right;
+   transform: translateX(-210px);
 }

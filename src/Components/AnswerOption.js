@@ -51,7 +51,7 @@ function AnswerOption(props) {
   switch(quizType(props)) {
     case 'package': 
       return(
-        <Grid item xs={12} md={12} lg={4} >
+        <Grid item xs={12} sm={12} md={12} lg={4}>
           <Button className={props.classes.image} style={{textTransform: 'none'}} onClick={() => {
             props.onAnswerSelected(props.question, props.answerContent, props.answerType)
           }}>
