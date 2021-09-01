@@ -22,7 +22,10 @@
 /* a. General Styles
 /* ------------------------------------------------------------------ */
 
-body { background: #00CCCC; }
+body { 
+   background: url("../images/hero_background.png") no-repeat center center fixed; 
+   background-size: cover;
+}
 
 /* ------------------------------------------------------------------ */
 /* b. Header Styles
@@ -59,7 +62,7 @@ header .banner-text h1 {
    font: 90px/1.1em 'opensans-bold', sans-serif;
    color: #fff;
    letter-spacing: -2px;
-   margin: 0 auto 18px auto;
+   margin: 0 auto 18px 50px;
 }
 header .banner-text h3 {
    font: 18px/1.9em 'librebaskerville-regular', serif;
@@ -90,7 +93,8 @@ header .social li {
    padding: 0;
 }
 header .social li a { color: #fff; }
-header .social li a:hover { color: #0762f9; }
+/* color: #0762f9; */
+header .social li a:hover { color: #000524; }
 
 /* scrolldown link */
 header .scrolldown a {
@@ -98,13 +102,12 @@ header .scrolldown a {
    bottom: 30px;
    left: 50%;
    margin-left: -29px;
-   color: #fff;
+   color: #ECAE00;
    display: block;
    height: 42px;
    width: 42px;
    font-size: 42px;
    line-height: 42px;
-   color: #fff;
    border-radius: 100%;
 
    -webkit-transition: all .3s ease-in-out;
@@ -112,7 +115,7 @@ header .scrolldown a {
    -o-transition: all .3s ease-in-out;
    transition: all .3s ease-in-out;
 }
-header .scrolldown a:hover { color: #0762f9; }
+header .scrolldown a:hover { color: #fff; }
 
 /* primary navigation
 --------------------------------------------------------------------- */
@@ -134,8 +137,11 @@ header .scrolldown a:hover { color: #0762f9; }
    position: fixed;
    left: 0;
    top: 0;
+   background-color: #07080fd3;
 }
-.opaque { background-color: #00CCCC; }
+
+/* background-color: #fc811de8; */
+/* .opaque { background-color: #000524b7; } */
 
 /* hide toggle button */
 #nav-wrap > a.mobile-btn { display: none; }
@@ -174,7 +180,7 @@ ul#nav li a {
 }
 
 ul#nav li a:active { background-color: transparent !important; }
-ul#nav li.current a { color: #000524; }
+ul#nav li.current a { color: #ffbb00; }
 
 
 /* ------------------------------------------------------------------ */
@@ -182,7 +188,7 @@ ul#nav li.current a { color: #000524; }
 /* ------------------------------------------------------------------ */
 
 #about {
-   background: #000524;
+   background: #07080fd3;
    padding-top: 96px;
    padding-bottom: 66px;
    overflow: hidden;
@@ -202,8 +208,8 @@ ul#nav li.current a { color: #000524; }
 }
 #about .profile-pic {
    position: relative;
-   width: 200px;
-   height: 200px;
+   width: 175px;
+   height: 175px;
    border-radius: 100%;
 }
 #about .contact-details { width: 41.66667%; }
@@ -933,7 +939,8 @@ footer {
    position: relative;
 }
 
-footer a, footer a:visited { color: #525252; }
+/* color: #525252; */
+footer a, footer a:visited { color: #fff; }
 footer a:hover, footer a:focus { color: #fff; }
 
 /* copyright */
@@ -954,7 +961,8 @@ footer .copyright li:before {
     content: "\2022";
     padding-left: 10px;
     padding-right: 10px;
-    color: #095153;
+    /* color: #095153; */
+    color: #fff;
 }
 footer .copyright  li:first-child:before {
     display: none;
@@ -989,7 +997,8 @@ footer .social-links li:first-child { margin-left: 0; }
 	display: block;
 	width: 60px;
 	height: 60px;
-	background-color: #525252;
+   /* background-color: #525252; */
+	background-color: #ECAE00;
 
 	-webkit-transition: all 0.2s ease-in-out;
    -moz-transition: all 0.2s ease-in-out;
@@ -1002,7 +1011,7 @@ footer .social-links li:first-child { margin-left: 0; }
    line-height: 60px;
  	border-radius: 100%;
 }
-#go-top a:hover { background-color: #0F9095; }
+#go-top a:hover { background-color: #07080f; }
 
 
 .social .btn:first-child{
@@ -1016,7 +1025,7 @@ footer .social-links li:first-child { margin-left: 0; }
    margin-right: 15px;
 }
 .project-btn{
-   background-color: #000524 !important;
+   background-color: #07080fa1 !important;
 }
 .github-btn{
    background-color: #34495e !important;

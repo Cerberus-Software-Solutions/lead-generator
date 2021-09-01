@@ -6,14 +6,27 @@ class Header extends Component {
   render() {
     if (!this.props.data) return null;
 
-    const project = this.props.data.project;
-    const github = this.props.data.github;
     const name = this.props.data.brand_name;
     const description = this.props.data.description;
 
+    let config = {
+      num: [0, 1],
+      rps: 1,
+      life: 50,
+      v: .05,
+      tha: [-40, 40],
+      body: "./images/black_car.png", // Whether to render pictures
+      alpha: 1,
+      scale: [1, 0.4],
+      position: "all", // all or center or {x:1,y:1,width:100,height:100}
+      cross: "cross", // cross or bround
+      random: 25,  // or null,
+      color: "#ffffff"
+    };
+
     return (
       <header id="home">
-        <ParticlesBg type="cobweb" bg={true} />
+        {/* <ParticlesBg type="circle" config={config} bg={true} /> */}
 
         <nav id="nav-wrap">
           <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
@@ -25,19 +38,19 @@ class Header extends Component {
 
           <ul id="nav" className="nav">
             <li className="current">
-              <a className="smoothscroll" href="#home">
+              <a style={{fontSize: '14px'}} className="smoothscroll" href="#home">
                 Home
               </a>
             </li>
 
             <li>
-              <a className="smoothscroll" href="#about">
+              <a style={{fontSize: '14px'}} className="smoothscroll" href="#about">
                 About
               </a>
             </li>
 
             <li>
-              <a className="smoothscroll" href="#quiz">
+              <a style={{fontSize: '14px'}} className="smoothscroll" href="#quiz">
                 Inquire
               </a>
             </li>
@@ -47,10 +60,12 @@ class Header extends Component {
         <div className="row banner">
           <div className="banner-text">
             <Fade bottom>
-              <h1 className="responsive-headline">{name}</h1>
+            {/* '#FFD200' */}
+              <h1 style={{color: '#ECAE00', paddingTop: "125px"}} className="responsive-headline">{name}</h1>
             </Fade>
             <Fade bottom duration={1200}>
-              <h3 style={{color: '#000524'}}>{description}.</h3>
+            {/* style={{color: '#000524'}} */}
+              <h3 style={{color: '#ECAE00'}}>{description}.</h3>
             </Fade>
             <hr />
             <Fade bottom duration={2000}>
