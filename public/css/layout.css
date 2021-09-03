@@ -187,6 +187,7 @@ ul#nav li.current a { color: #ffbb00; }
 /* c. About Section
 /* ------------------------------------------------------------------ */
 
+/* 07080fd3 */
 #about {
    background: #07080fd3;
    padding-top: 96px;
@@ -220,7 +221,7 @@ ul#nav li.current a { color: #ffbb00; }
 #about .main-col { padding-right: 5%; }
 #about .download .button {
    margin-top: 6px;
-   background: #444;
+   background: rgb(134, 130, 130);
 }
 #about .download .button:hover {
    background: #fff;

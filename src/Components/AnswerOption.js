@@ -55,7 +55,7 @@ function AnswerOption(props) {
           <Button className={props.classes.image} style={{textTransform: 'none'}} onClick={() => {
             props.onAnswerSelected(props.question, props.answerContent, props.answerType)
           }}>
-            <Paper  id="paper" style={{fontSize: 28, color: 'black'}}>{props.answerContent}</Paper>
+            <Paper  id="paper" style={{fontSize: 28, color: 'white', background: '#07080fdc'}}>{props.answerContent}</Paper>
             <Paper  id="paper" style={{fontSize: 18, textAlign: 'left'}}>
               {props.answerPackageOptions.map(packgageItems)}
             </Paper>
